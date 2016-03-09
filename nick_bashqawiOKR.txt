@@ -1,0 +1,3 @@
+-Write and implement player controller (2 hours)
+-Implement pause menu system (1 hour)
+-Implement character billboarding (0.5 hours)
