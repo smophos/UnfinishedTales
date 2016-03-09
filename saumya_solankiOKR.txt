@@ -1,0 +1,3 @@
+-Implement landscape for level (1 hours)
+-Implement player - item interaction (2 hour)
+-Implement character billboarding for lumberjack, hills, castle, sun (3.5 hours)
