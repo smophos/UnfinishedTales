@@ -1,0 +1,1365 @@
+fileFormatVersion: 2
+guid: 7f040fab48202714f938be266558c348
+timeCreated: 1457578982
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: KnightWalking60percent_0
+    21300002: KnightWalking60percent_1
+    21300004: KnightWalking60percent_2
+    21300006: KnightWalking60percent_3
+    21300008: KnightWalking60percent_4
+    21300010: KnightWalking60percent_5
+    21300012: KnightWalking60percent_6
+    21300014: KnightWalking60percent_7
+    21300016: KnightWalking60percent_8
+    21300018: KnightWalking60percent_9
+    21300020: KnightWalking60percent_10
+    21300022: KnightWalking60percent_11
+    21300024: KnightWalking60percent_12
+    21300026: KnightWalking60percent_13
+    21300028: KnightWalking60percent_14
+    21300030: KnightWalking60percent_15
+    21300032: KnightWalking60percent_16
+    21300034: KnightWalking60percent_17
+    21300036: KnightWalking60percent_18
+    21300038: KnightWalking60percent_19
+    21300040: KnightWalking60percent_20
+    21300042: KnightWalking60percent_21
+    21300044: KnightWalking60percent_22
+    21300046: KnightWalking60percent_23
+    21300048: KnightWalking60percent_24
+    21300050: KnightWalking60percent_25
+    21300052: KnightWalking60percent_26
+    21300054: KnightWalking60percent_27
+    21300056: KnightWalking60percent_28
+    21300058: KnightWalking60percent_29
+    21300060: KnightWalking60percent_30
+    21300062: KnightWalking60percent_31
+    21300064: KnightWalking60percent_32
+    21300066: KnightWalking60percent_33
+    21300068: KnightWalking60percent_34
+    21300070: KnightWalking60percent_35
+    21300072: KnightWalking60percent_36
+    21300074: KnightWalking60percent_37
+    21300076: KnightWalking60percent_38
+    21300078: KnightWalking60percent_39
+    21300080: KnightWalking60percent_40
+    21300082: KnightWalking60percent_41
+    21300084: KnightWalking60percent_42
+    21300086: KnightWalking60percent_43
+    21300088: KnightWalking60percent_44
+    21300090: KnightWalking60percent_45
+    21300092: KnightWalking60percent_46
+    21300094: KnightWalking60percent_47
+    21300096: KnightWalking60percent_48
+    21300098: KnightWalking60percent_49
+    21300100: KnightWalking60percent_50
+    21300102: KnightWalking60percent_51
+    21300104: KnightWalking60percent_52
+    21300106: KnightWalking60percent_53
+    21300108: KnightWalking60percent_54
+    21300110: KnightWalking60percent_55
+    21300112: KnightWalking60percent_56
+    21300114: KnightWalking60percent_57
+    21300116: KnightWalking60percent_58
+    21300118: KnightWalking60percent_59
+    21300120: KnightWalking60percent_60
+    21300122: KnightWalking60percent_61
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: KnightWalking60percent_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: -132.07141}
+        - {x: 52.5, y: -132.07141}
+        - {x: 52.5, y: 3.9285889}
+        - {x: 17.5, y: 133.92859}
+        - {x: -14.5, y: 133.92859}
+        - {x: -25.5, y: 121.92859}
+        - {x: -37.5, y: 82.92859}
+        - {x: -37.5, y: -102.07141}
+        - {x: -35.5, y: -130.07141}
+        - {x: -22.5, y: -132.07141}
+        - {x: -3.5, y: -132.07141}
+        - {x: -2.5, y: -122.07141}
+        - {x: -6.5, y: -117.07141}
+        - {x: 0.5, y: -92.07141}
+    - name: KnightWalking60percent_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.785706, y: 133.92859}
+        - {x: -24.214294, y: 133.92859}
+        - {x: -35.214294, y: 98.92859}
+        - {x: -35.214294, y: -127.07141}
+        - {x: -22.214294, y: -133.07141}
+        - {x: 49.785706, y: -133.07141}
+        - {x: 49.785706, y: -25.071411}
+        - {x: 32.785706, y: 125.92859}
+    - name: KnightWalking60percent_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47.07141, y: -133.07141}
+        - {x: 47.07141, y: 16.928589}
+        - {x: 25.071411, y: 133.92859}
+        - {x: -34.92859, y: 133.92859}
+        - {x: -34.92859, y: -133.07141}
+        - {x: 1.0714111, y: -133.07141}
+        - {x: 3.0714111, y: -123.07141}
+        - {x: 13.071411, y: -132.07141}
+        - {x: 19.071411, y: -133.07141}
+    - name: KnightWalking60percent_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43.857147, y: 17.928589}
+        - {x: 21.857147, y: 131.92859}
+        - {x: 18.857147, y: 133.92859}
+        - {x: -25.142853, y: 133.92859}
+        - {x: -34.142853, y: 106.92859}
+        - {x: -34.142853, y: -129.07141}
+        - {x: -8.142853, y: -133.07141}
+        - {x: 1.8571472, y: -133.07141}
+        - {x: 4.857147, y: -130.07141}
+        - {x: 18.857147, y: -133.07141}
+        - {x: 43.857147, y: -133.07141}
+    - name: KnightWalking60percent_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40.642822, y: 11.928589}
+        - {x: 20.642822, y: 133.92859}
+        - {x: -35.357178, y: 133.92859}
+        - {x: -35.357178, y: -133.07141}
+        - {x: 2.6428223, y: -133.07141}
+        - {x: 4.6428223, y: -132.07141}
+        - {x: 2.6428223, y: -124.07141}
+        - {x: 5.6428223, y: -133.07141}
+        - {x: 40.642822, y: -133.07141}
+    - name: KnightWalking60percent_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.92859, y: -133.07141}
+        - {x: 39.92859, y: -32.07141}
+        - {x: 29.928589, y: 123.92859}
+        - {x: 17.928589, y: 133.92859}
+        - {x: -9.071411, y: 133.92859}
+        - {x: -19.071411, y: 131.92859}
+        - {x: -35.07141, y: 121.92859}
+        - {x: -35.07141, y: -133.07141}
+        - {x: 3.9285889, y: -133.07141}
+        - {x: 6.928589, y: -123.07141}
+        - {x: 7.928589, y: -131.07141}
+        - {x: 8.928589, y: -133.07141}
+    - name: KnightWalking60percent_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.2142944, y: -97.07141}
+        - {x: 7.2142944, y: -133.07141}
+        - {x: 26.214294, y: -133.07141}
+        - {x: 38.214294, y: -132.07141}
+        - {x: 39.214294, y: -130.07141}
+        - {x: 39.214294, y: -121.07141}
+        - {x: 33.214294, y: 124.92859}
+        - {x: 13.214294, y: 133.92859}
+        - {x: -21.785706, y: 133.92859}
+        - {x: -33.785706, y: 112.92859}
+        - {x: -33.785706, y: -36.07141}
+        - {x: -26.785706, y: -133.07141}
+        - {x: 5.2142944, y: -133.07141}
+        - {x: 7.2142944, y: -131.07141}
+        - {x: 7.2142944, y: -125.07141}
+        - {x: 4.2142944, y: -119.07141}
+    - name: KnightWalking60percent_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: -133.07141}
+        - {x: 37.5, y: -133.07141}
+        - {x: 37.5, y: 13.928589}
+        - {x: 33.5, y: 125.92859}
+        - {x: 16.5, y: 133.92859}
+        - {x: -29.5, y: 133.92859}
+        - {x: -35.5, y: 127.92859}
+    - name: KnightWalking60percent_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.214355, y: 133.92859}
+        - {x: -35.214355, y: -133.07141}
+        - {x: 36.785645, y: -133.07141}
+        - {x: 36.785645, y: 25.928589}
+        - {x: 30.785645, y: 127.92859}
+        - {x: 26.785645, y: 133.92859}
+    - name: KnightWalking60percent_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.928589, y: 133.92859}
+        - {x: -31.928589, y: 128.92859}
+        - {x: -33.92859, y: 117.92859}
+        - {x: -33.92859, y: -66.07141}
+        - {x: -22.928589, y: -133.07141}
+        - {x: 35.07141, y: -133.07141}
+        - {x: 35.07141, y: 62.92859}
+        - {x: 22.071411, y: 133.92859}
+    - name: KnightWalking60percent_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: 133.85718}
+        - {x: -35.5, y: 111.85718}
+        - {x: -35.5, y: -63.142822}
+        - {x: -23.5, y: -130.14282}
+        - {x: -19.5, y: -133.14282}
+        - {x: 33.5, y: -133.14282}
+        - {x: 33.5, y: 12.857178}
+        - {x: 27.5, y: 122.85718}
+        - {x: 14.5, y: 133.85718}
+    - name: KnightWalking60percent_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.785706, y: 133.85718}
+        - {x: -9.214294, y: 133.85718}
+        - {x: -17.214294, y: 131.85718}
+        - {x: -35.214294, y: 108.85718}
+        - {x: -35.214294, y: -133.14282}
+        - {x: 31.785706, y: -133.14282}
+        - {x: 32.785706, y: -131.14282}
+        - {x: 32.785706, y: -30.142822}
+        - {x: 27.785706, y: 121.85718}
+    - name: KnightWalking60percent_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.928589, y: 133.85718}
+        - {x: -27.928589, y: 128.85718}
+        - {x: -34.92859, y: 95.85718}
+        - {x: -34.92859, y: -36.142822}
+        - {x: -17.928589, y: -129.14282}
+        - {x: -14.928589, y: -132.14282}
+        - {x: 1.0714111, y: -134.14282}
+        - {x: 32.07141, y: -134.14282}
+        - {x: 32.07141, y: 56.857178}
+        - {x: 23.071411, y: 133.85718}
+    - name: KnightWalking60percent_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.142853, y: 133.85718}
+        - {x: -34.142853, y: 94.85718}
+        - {x: -34.142853, y: -38.142822}
+        - {x: -19.142853, y: -132.14282}
+        - {x: -13.142853, y: -134.14282}
+        - {x: 29.857147, y: -134.14282}
+        - {x: 29.857147, y: 126.85718}
+        - {x: 19.857147, y: 133.85718}
+    - name: KnightWalking60percent_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.357178, y: 133.85718}
+        - {x: -35.357178, y: 129.85718}
+        - {x: -35.357178, y: -108.14282}
+        - {x: -33.357178, y: -134.14282}
+        - {x: 28.642822, y: -134.14282}
+        - {x: 28.642822, y: 128.85718}
+        - {x: 17.642822, y: 133.85718}
+    - name: KnightWalking60percent_15
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.071411, y: 133.85718}
+        - {x: -23.071411, y: 125.85718}
+        - {x: -31.071411, y: 95.85718}
+        - {x: -35.07141, y: 78.85718}
+        - {x: -35.07141, y: 11.857178}
+        - {x: -18.071411, y: -132.14282}
+        - {x: -6.071411, y: -134.14282}
+        - {x: 27.928589, y: -134.14282}
+        - {x: 27.928589, y: 129.85718}
+        - {x: 17.928589, y: 133.85718}
+    - name: KnightWalking60percent_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.785706, y: 120.85718}
+        - {x: -33.785706, y: -77.14282}
+        - {x: -23.785706, y: -134.14282}
+        - {x: 27.214294, y: -134.14282}
+        - {x: 27.214294, y: 133.85718}
+        - {x: -29.785706, y: 133.85718}
+        - {x: -30.785706, y: 132.85718}
+    - name: KnightWalking60percent_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 133.85718}
+        - {x: -35.5, y: 100.85718}
+        - {x: -35.5, y: -56.142822}
+        - {x: -15.5, y: -135.14282}
+        - {x: 28.5, y: -135.14282}
+        - {x: 28.5, y: 131.85718}
+        - {x: 24.5, y: 133.85718}
+    - name: KnightWalking60percent_18
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.2143555, y: 133.85718}
+        - {x: -26.214355, y: 130.85718}
+        - {x: -35.214355, y: 106.85718}
+        - {x: -35.214355, y: -39.142822}
+        - {x: -15.214355, y: -135.14282}
+        - {x: 23.785645, y: -135.14282}
+        - {x: 25.785645, y: -134.14282}
+        - {x: 31.785645, y: -126.14282}
+        - {x: 31.785645, y: 128.85718}
+        - {x: 20.785645, y: 133.85718}
+    - name: KnightWalking60percent_19
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2000
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.071411, y: 133.85718}
+        - {x: -33.92859, y: 133.85718}
+        - {x: -33.92859, y: -92.14282}
+        - {x: -9.928589, y: -135.14282}
+        - {x: 25.071411, y: -135.14282}
+        - {x: 34.07141, y: -132.14282}
+        - {x: 35.07141, y: -128.14282}
+        - {x: 35.07141, y: 66.85718}
+    - name: KnightWalking60percent_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: -59.214355}
+        - {x: 21.5, y: -54.214355}
+        - {x: 22.5, y: -60.214355}
+        - {x: 23.5, y: -63.214355}
+        - {x: 33.5, y: -62.214355}
+        - {x: 33.5, y: 31.785645}
+        - {x: 29.5, y: 118.785645}
+        - {x: 22.5, y: 127.785645}
+        - {x: 7.5, y: 132.78564}
+        - {x: -20.5, y: 132.78564}
+        - {x: -35.5, y: 126.785645}
+        - {x: -35.5, y: -136.21436}
+        - {x: 24.5, y: -136.21436}
+        - {x: 27.5, y: -135.21436}
+        - {x: 28.5, y: -122.214355}
+        - {x: 24.5, y: -65.214355}
+        - {x: 22.5, y: -65.214355}
+    - name: KnightWalking60percent_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.214294, y: 132.78564}
+        - {x: -35.214294, y: 117.785645}
+        - {x: -35.214294, y: -59.214355}
+        - {x: -25.214294, y: -136.21436}
+        - {x: 33.785706, y: -136.21436}
+        - {x: 33.785706, y: 87.785645}
+        - {x: 32.785706, y: 121.785645}
+        - {x: 14.785706, y: 132.78564}
+    - name: KnightWalking60percent_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.928589, y: 132.78564}
+        - {x: -34.92859, y: 128.78564}
+        - {x: -34.92859, y: -96.214355}
+        - {x: -19.928589, y: -136.21436}
+        - {x: 34.07141, y: -136.21436}
+        - {x: 34.07141, y: 131.78564}
+        - {x: 33.07141, y: 132.78564}
+    - name: KnightWalking60percent_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24.857147, y: -114.214355}
+        - {x: 33.857147, y: -74.214355}
+        - {x: 33.857147, y: 13.785645}
+        - {x: 28.857147, y: 124.785645}
+        - {x: 12.857147, y: 132.78564}
+        - {x: -33.142853, y: 132.78564}
+        - {x: -34.142853, y: 129.78564}
+        - {x: -34.142853, y: -54.214355}
+        - {x: -15.142853, y: -136.21436}
+        - {x: 19.857147, y: -136.21436}
+        - {x: 30.857147, y: -132.21436}
+        - {x: 33.857147, y: -123.214355}
+        - {x: 33.857147, y: -120.214355}
+    - name: KnightWalking60percent_24
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.357178, y: 132.78564}
+        - {x: -35.357178, y: 94.785645}
+        - {x: -35.357178, y: -13.214355}
+        - {x: -18.357178, y: -134.21436}
+        - {x: -16.357178, y: -136.21436}
+        - {x: 32.642822, y: -136.21436}
+        - {x: 32.642822, y: 132.78564}
+    - name: KnightWalking60percent_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.928589, y: 132.78564}
+        - {x: -10.071411, y: 132.78564}
+        - {x: -34.07141, y: 110.785645}
+        - {x: -35.07141, y: 106.785645}
+        - {x: -35.07141, y: -44.214355}
+        - {x: -25.071411, y: -136.21436}
+        - {x: 33.92859, y: -136.21436}
+        - {x: 33.92859, y: 55.785645}
+        - {x: 30.928589, y: 119.785645}
+    - name: KnightWalking60percent_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.785706, y: 91.785645}
+        - {x: -22.785706, y: 85.785645}
+        - {x: -30.785706, y: 65.785645}
+        - {x: -33.785706, y: 53.785645}
+        - {x: -33.785706, y: -124.214355}
+        - {x: -23.785706, y: -137.21436}
+        - {x: 36.214294, y: -137.21436}
+        - {x: 36.214294, y: 59.785645}
+        - {x: 24.214294, y: 132.78564}
+        - {x: -10.785706, y: 132.78564}
+        - {x: -12.785706, y: 131.78564}
+        - {x: -26.785706, y: 108.785645}
+    - name: KnightWalking60percent_27
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 132.78564}
+        - {x: -16.5, y: 132.78564}
+        - {x: -35.5, y: 115.785645}
+        - {x: -35.5, y: -137.21436}
+        - {x: 35.5, y: -137.21436}
+        - {x: 35.5, y: 92.785645}
+        - {x: 30.5, y: 119.785645}
+    - name: KnightWalking60percent_28
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.214355, y: 132.78564}
+        - {x: -32.214355, y: 117.785645}
+        - {x: -35.214355, y: 106.785645}
+        - {x: -35.214355, y: -48.214355}
+        - {x: -23.214355, y: -137.21436}
+        - {x: 28.785645, y: -137.21436}
+        - {x: 37.785645, y: -129.21436}
+        - {x: 37.785645, y: 122.785645}
+        - {x: 21.785645, y: 132.78564}
+    - name: KnightWalking60percent_29
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1600
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.92859, y: 109.785645}
+        - {x: -33.92859, y: -22.214355}
+        - {x: -21.928589, y: -137.21436}
+        - {x: 40.07141, y: -137.21436}
+        - {x: 40.07141, y: 81.785645}
+        - {x: 37.07141, y: 124.785645}
+        - {x: 17.071411, y: 132.78564}
+        - {x: -16.928589, y: 132.78564}
+        - {x: -32.92859, y: 113.785645}
+    - name: KnightWalking60percent_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.5, y: -126.285706}
+        - {x: 40.5, y: -135.2857}
+        - {x: 40.5, y: 126.714294}
+        - {x: 26.5, y: 133.7143}
+        - {x: -10.5, y: 133.7143}
+        - {x: -26.5, y: 129.7143}
+        - {x: -35.5, y: 115.714294}
+        - {x: -35.5, y: -124.285706}
+        - {x: -34.5, y: -137.2857}
+        - {x: 4.5, y: -137.2857}
+        - {x: 7.5, y: -136.2857}
+        - {x: 8.5, y: -127.285706}
+        - {x: 4.5, y: -121.285706}
+    - name: KnightWalking60percent_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.7857056, y: -120.285706}
+        - {x: 10.785706, y: -127.285706}
+        - {x: 39.785706, y: -126.285706}
+        - {x: 41.785706, y: -124.285706}
+        - {x: 41.785706, y: -102.285706}
+        - {x: 37.785706, y: -62.285706}
+        - {x: 37.785706, y: 123.714294}
+        - {x: 14.785706, y: 133.7143}
+        - {x: -24.214294, y: 133.7143}
+        - {x: -35.214294, y: 125.714294}
+        - {x: -35.214294, y: -136.2857}
+        - {x: 7.7857056, y: -136.2857}
+        - {x: 8.785706, y: -126.285706}
+        - {x: 0.78570557, y: -100.285706}
+        - {x: 5.7857056, y: -95.285706}
+    - name: KnightWalking60percent_32
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.071411, y: -126.285706}
+        - {x: 41.07141, y: -127.285706}
+        - {x: 42.07141, y: -126.285706}
+        - {x: 42.07141, y: -49.285706}
+        - {x: 24.071411, y: 128.7143}
+        - {x: 11.071411, y: 133.7143}
+        - {x: -18.928589, y: 133.7143}
+        - {x: -34.92859, y: 124.714294}
+        - {x: -34.92859, y: -136.2857}
+        - {x: 7.071411, y: -136.2857}
+        - {x: 9.071411, y: -135.2857}
+        - {x: 10.071411, y: -126.285706}
+        - {x: 5.071411, y: -121.285706}
+    - name: KnightWalking60percent_33
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.142853, y: 133.7143}
+        - {x: -34.142853, y: 109.714294}
+        - {x: -34.142853, y: -72.285706}
+        - {x: -30.142853, y: -137.2857}
+        - {x: 33.857147, y: -137.2857}
+        - {x: 40.857147, y: -136.2857}
+        - {x: 40.857147, y: -72.285706}
+        - {x: 38.857147, y: -55.285706}
+        - {x: 34.857147, y: 122.714294}
+        - {x: 14.857147, y: 133.7143}
+    - name: KnightWalking60percent_34
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.357178, y: 133.7143}
+        - {x: -27.357178, y: 130.7143}
+        - {x: -35.357178, y: 118.714294}
+        - {x: -35.357178, y: -123.285706}
+        - {x: -29.357178, y: -137.2857}
+        - {x: 38.642822, y: -137.2857}
+        - {x: 38.642822, y: 129.7143}
+        - {x: 28.642822, y: 133.7143}
+    - name: KnightWalking60percent_35
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.071411, y: 133.7143}
+        - {x: -31.071411, y: 111.714294}
+        - {x: -35.07141, y: 104.714294}
+        - {x: -35.07141, y: -137.2857}
+        - {x: 36.92859, y: -137.2857}
+        - {x: 36.92859, y: 129.7143}
+        - {x: 23.928589, y: 133.7143}
+    - name: KnightWalking60percent_36
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15.214294, y: 133.7143}
+        - {x: -12.785706, y: 133.7143}
+        - {x: -33.785706, y: 122.714294}
+        - {x: -33.785706, y: -73.285706}
+        - {x: -29.785706, y: -137.2857}
+        - {x: 37.214294, y: -137.2857}
+        - {x: 37.214294, y: 13.714294}
+        - {x: 32.214294, y: 121.714294}
+    - name: KnightWalking60percent_37
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 133.7143}
+        - {x: -35.5, y: -136.2857}
+        - {x: 34.5, y: -136.2857}
+        - {x: 34.5, y: 123.714294}
+        - {x: 21.5, y: 133.7143}
+    - name: KnightWalking60percent_38
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.785645, y: -118.285706}
+        - {x: 26.785645, y: -113.285706}
+        - {x: 28.785645, y: -92.285706}
+        - {x: 28.785645, y: -65.285706}
+        - {x: 24.785645, y: -48.285706}
+        - {x: 22.785645, y: -38.285706}
+        - {x: 21.785645, y: -35.285706}
+        - {x: 33.785645, y: 27.714294}
+        - {x: 33.785645, y: 87.714294}
+        - {x: 22.785645, y: 133.7143}
+        - {x: -15.214355, y: 133.7143}
+        - {x: -35.214355, y: 124.714294}
+        - {x: -35.214355, y: -126.285706}
+        - {x: -22.214355, y: -136.2857}
+        - {x: 13.785645, y: -136.2857}
+        - {x: 15.785645, y: -133.2857}
+        - {x: 32.785645, y: -130.2857}
+        - {x: 33.785645, y: -127.285706}
+    - name: KnightWalking60percent_39
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1200
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.071411, y: 133.7143}
+        - {x: -25.928589, y: 133.7143}
+        - {x: -33.92859, y: 111.714294}
+        - {x: -33.92859, y: -97.285706}
+        - {x: -24.928589, y: -136.2857}
+        - {x: 26.071411, y: -136.2857}
+        - {x: 32.07141, y: -133.2857}
+        - {x: 32.07141, y: 35.714294}
+        - {x: 29.071411, y: 127.714294}
+    - name: KnightWalking60percent_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 132.64282}
+        - {x: -32.5, y: 130.64282}
+        - {x: -35.5, y: 91.64282}
+        - {x: -35.5, y: 36.642822}
+        - {x: -22.5, y: -137.35718}
+        - {x: 29.5, y: -137.35718}
+        - {x: 29.5, y: 131.64282}
+        - {x: 28.5, y: 132.64282}
+    - name: KnightWalking60percent_41
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.214294, y: 132.64282}
+        - {x: -35.214294, y: 102.64282}
+        - {x: -35.214294, y: -40.357178}
+        - {x: -15.214294, y: -137.35718}
+        - {x: 25.785706, y: -137.35718}
+        - {x: 28.785706, y: -132.35718}
+        - {x: 28.785706, y: 125.64282}
+        - {x: 17.785706, y: 132.64282}
+    - name: KnightWalking60percent_42
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.071411, y: 132.64282}
+        - {x: -14.928589, y: 132.64282}
+        - {x: -31.928589, y: 128.64282}
+        - {x: -34.92859, y: 105.64282}
+        - {x: -34.92859, y: 0.64282227}
+        - {x: -15.928589, y: -137.35718}
+        - {x: 28.071411, y: -137.35718}
+        - {x: 28.071411, y: 68.64282}
+        - {x: 25.071411, y: 119.64282}
+    - name: KnightWalking60percent_43
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34.142853, y: 132.64282}
+        - {x: -34.142853, y: -67.35718}
+        - {x: -12.142853, y: -136.35718}
+        - {x: 26.857147, y: -136.35718}
+        - {x: 26.857147, y: 129.64282}
+        - {x: 23.857147, y: 132.64282}
+    - name: KnightWalking60percent_44
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.357178, y: 133.64282}
+        - {x: -33.357178, y: 127.64282}
+        - {x: -35.357178, y: 115.64282}
+        - {x: -35.357178, y: 0.64282227}
+        - {x: -9.357178, y: -136.35718}
+        - {x: 24.642822, y: -136.35718}
+        - {x: 24.642822, y: 122.64282}
+        - {x: 17.642822, y: 133.64282}
+    - name: KnightWalking60percent_45
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.071411, y: 133.64282}
+        - {x: -15.071411, y: 128.64282}
+        - {x: -32.07141, y: 111.64282}
+        - {x: -35.07141, y: 62.642822}
+        - {x: -35.07141, y: 21.642822}
+        - {x: -14.071411, y: -136.35718}
+        - {x: 25.928589, y: -136.35718}
+        - {x: 25.928589, y: 117.64282}
+        - {x: 12.928589, y: 133.64282}
+    - name: KnightWalking60percent_46
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.785706, y: 133.64282}
+        - {x: -33.785706, y: 121.64282}
+        - {x: -33.785706, y: -55.357178}
+        - {x: -7.7857056, y: -136.35718}
+        - {x: 26.214294, y: -136.35718}
+        - {x: 26.214294, y: 123.64282}
+        - {x: 16.214294, y: 133.64282}
+    - name: KnightWalking60percent_47
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 133.64282}
+        - {x: -35.5, y: -135.35718}
+        - {x: 26.5, y: -135.35718}
+        - {x: 26.5, y: 111.64282}
+        - {x: 21.5, y: 133.64282}
+    - name: KnightWalking60percent_48
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.214355, y: 133.64282}
+        - {x: -35.214355, y: -37.357178}
+        - {x: -15.214355, y: -135.35718}
+        - {x: 28.785645, y: -135.35718}
+        - {x: 28.785645, y: 121.64282}
+        - {x: 14.785645, y: 133.64282}
+    - name: KnightWalking60percent_49
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 800
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.92859, y: 133.64282}
+        - {x: -33.92859, y: -134.35718}
+        - {x: 30.071411, y: -134.35718}
+        - {x: 30.071411, y: 129.64282}
+        - {x: 17.071411, y: 133.64282}
+    - name: KnightWalking60percent_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: -20.428589}
+        - {x: -27.5, y: -134.42859}
+        - {x: 29.5, y: -134.42859}
+        - {x: 29.5, y: 23.571411}
+        - {x: 23.5, y: 125.57141}
+        - {x: 7.5, y: 133.57141}
+        - {x: -22.5, y: 133.57141}
+        - {x: -35.5, y: 121.57141}
+    - name: KnightWalking60percent_51
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.785706, y: 133.57141}
+        - {x: -11.214294, y: 133.57141}
+        - {x: -20.214294, y: 131.57141}
+        - {x: -35.214294, y: 111.57141}
+        - {x: -35.214294, y: -134.42859}
+        - {x: 31.785706, y: -134.42859}
+        - {x: 31.785706, y: 85.57141}
+        - {x: 22.785706, y: 120.57141}
+    - name: KnightWalking60percent_52
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.928589, y: 133.57141}
+        - {x: -30.928589, y: 126.57141}
+        - {x: -34.92859, y: 116.57141}
+        - {x: -34.92859, y: -53.42859}
+        - {x: -18.928589, y: -133.42859}
+        - {x: 34.07141, y: -133.42859}
+        - {x: 34.07141, y: 127.57141}
+        - {x: 26.071411, y: 133.57141}
+    - name: KnightWalking60percent_53
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.857147, y: 133.57141}
+        - {x: -11.142853, y: 133.57141}
+        - {x: -31.142853, y: 127.57141}
+        - {x: -34.142853, y: 105.57141}
+        - {x: -34.142853, y: -50.42859}
+        - {x: -29.142853, y: -133.42859}
+        - {x: 34.857147, y: -133.42859}
+        - {x: 34.857147, y: -38.42859}
+        - {x: 21.857147, y: 130.57141}
+    - name: KnightWalking60percent_54
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.357178, y: 133.57141}
+        - {x: -35.357178, y: 110.57141}
+        - {x: -35.357178, y: -92.42859}
+        - {x: -26.357178, y: -130.42859}
+        - {x: -11.357178, y: -133.42859}
+        - {x: 35.642822, y: -133.42859}
+        - {x: 35.642822, y: 133.57141}
+    - name: KnightWalking60percent_55
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.071411, y: 133.57141}
+        - {x: -24.071411, y: 122.57141}
+        - {x: -35.07141, y: 90.57141}
+        - {x: -35.07141, y: -66.42859}
+        - {x: -29.071411, y: -124.42859}
+        - {x: -23.071411, y: -132.42859}
+        - {x: -6.071411, y: -133.42859}
+        - {x: 36.92859, y: -133.42859}
+        - {x: 37.92859, y: -131.42859}
+        - {x: 37.92859, y: 53.57141}
+        - {x: 29.928589, y: 133.57141}
+    - name: KnightWalking60percent_56
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.785706, y: 133.57141}
+        - {x: -33.785706, y: -133.42859}
+        - {x: 41.214294, y: -133.42859}
+        - {x: 41.214294, y: 132.57141}
+        - {x: 33.214294, y: 133.57141}
+    - name: KnightWalking60percent_57
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.5, y: -101.42859}
+        - {x: 6.5, y: -133.42859}
+        - {x: 37.5, y: -133.42859}
+        - {x: 40.5, y: -120.42859}
+        - {x: 32.5, y: -114.42859}
+        - {x: 41.5, y: -68.42859}
+        - {x: 41.5, y: -41.42859}
+        - {x: 22.5, y: 125.57141}
+        - {x: 18.5, y: 133.57141}
+        - {x: -20.5, y: 133.57141}
+        - {x: -35.5, y: 127.57141}
+        - {x: -35.5, y: -133.42859}
+        - {x: 5.5, y: -133.42859}
+        - {x: 5.5, y: -125.42859}
+        - {x: 1.5, y: -118.42859}
+    - name: KnightWalking60percent_58
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.785645, y: -133.42859}
+        - {x: 44.785645, y: 133.57141}
+        - {x: -20.214355, y: 133.57141}
+        - {x: -35.214355, y: 127.57141}
+        - {x: -35.214355, y: -133.42859}
+        - {x: 3.7856445, y: -133.42859}
+        - {x: 4.7856445, y: -132.42859}
+        - {x: 4.7856445, y: -123.42859}
+        - {x: 9.785645, y: -132.42859}
+        - {x: 10.785645, y: -133.42859}
+    - name: KnightWalking60percent_59
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 400
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.92859, y: -126.42859}
+        - {x: -30.928589, y: -133.42859}
+        - {x: 47.07141, y: -133.42859}
+        - {x: 47.07141, y: -31.428589}
+        - {x: 26.071411, y: 133.57141}
+        - {x: -16.928589, y: 133.57141}
+        - {x: -33.92859, y: 117.57141}
+    - name: KnightWalking60percent_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24.5, y: 133.5}
+        - {x: -35.5, y: 95.5}
+        - {x: -35.5, y: -60.5}
+        - {x: -33.5, y: -128.5}
+        - {x: -29.5, y: -133.5}
+        - {x: 47.5, y: -133.5}
+        - {x: 47.5, y: 73.5}
+        - {x: 37.5, y: 128.5}
+        - {x: 21.5, y: 133.5}
+    - name: KnightWalking60percent_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.214294, y: 133.5}
+        - {x: -35.214294, y: 102.5}
+        - {x: -35.214294, y: -133.5}
+        - {x: 49.785706, y: -133.5}
+        - {x: 49.785706, y: -32.5}
+        - {x: 40.785706, y: 58.5}
+        - {x: 18.785706, y: 133.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
