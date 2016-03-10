@@ -17,13 +17,13 @@ public class GameController : MonoBehaviour {
 
 	// Make sure there is only one instance of this class
 	void Awake () {
-		//if (controller == null) {
-		//	DontDestroyOnLoad (gameObject);
+		if (controller == null) {
+			DontDestroyOnLoad (gameObject);
 			controller = this;
-	//	}
-	//	else if (controller != this) {
-	//		Destroy (gameObject);
-	//	}
+		}
+		else if (controller != this) {
+			Destroy (gameObject);
+		}
 	}
 	
 	// Update is called once per frame

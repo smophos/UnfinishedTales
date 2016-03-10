@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void move(float dir) {
-		rb.velocity = new Vector3 (dir*speed, 0f, 0f);
+		rb.velocity = new Vector3 (dir*speed, rb.velocity.y, 0f);
 	}
 
 	public Vector2 getSpeed() {
