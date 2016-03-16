@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
     private float volHighRange = 1.0f;
     float delay = 0f;
 
+	bool textVisible = false;
+
     // Use this for initialization
     void Start () {
 		rb = GetComponent<Rigidbody> ();
@@ -35,6 +37,10 @@ public class PlayerController : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.S) && !switching) {
 			SwitchLayer (Time.time, distance, -1);
+		}
+
+		if (Input.GetKeyDown (KeyCode.F)) {
+			StoryManager.GetStoryManager ().ShowText ();
 		}
 
 		float horizontal = Input.GetAxisRaw ("Horizontal");

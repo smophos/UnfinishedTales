@@ -80,10 +80,12 @@ public class ProgressTracker : MonoBehaviour {
 		if (condition.Equals ("bridgeCheck")) {
 			bridgeCheck = satisfied;
 
-			if (!woodsmanChat)
+			if (!woodsmanChat) {
 				storyManager.AddText ("... but the bridge was out. He would need to find another path.");
-			else
+				storyManager.ShowText ();
+			} else {
 				storyManager.AddText (" The bridge was out, but the knight had a plan.");
+			}
 		}
 		if (condition.Equals ("bridgeDown")) {
 			storyManager.ChangeText ("Having felled the tree, our hero coninued on his quest.");

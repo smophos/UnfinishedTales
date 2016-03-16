@@ -6,6 +6,7 @@ using System.Collections;
 public class StoryManager : MonoBehaviour {
 
 	public Text storyText;
+	public Animator story_anim;
 
 	private static StoryManager storyManager;
 
@@ -20,7 +21,7 @@ public class StoryManager : MonoBehaviour {
 		}
 	}
 
-	public static StoryManager GetStoryManager() {
+	public static StoryManager GetStoryManager () {
 		return storyManager;
 	}
 
@@ -29,11 +30,23 @@ public class StoryManager : MonoBehaviour {
 	
 	}
 
-	public void ChangeText(string story) {
+	public void ChangeText (string story) {
 		storyText.text = story;
 	}
 
-	public void AddText(string story) {
+	public void AddText (string story) {
 		storyText.text += story;
 	}
+
+	public void ShowText () {
+		story_anim.SetTrigger ("Play");
+	}
+
+	/*public void TextVisible (bool cond) {
+		story_anim.StopPlayback ();
+		if (cond)
+			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 1f);
+		else
+			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 0f);
+	}*/
 }
