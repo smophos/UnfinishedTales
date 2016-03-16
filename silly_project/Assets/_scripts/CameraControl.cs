@@ -33,7 +33,7 @@ public class CameraControl : MonoBehaviour {
 		speedX = Mathf.Abs (playerC.getSpeed ().x);
 		speedY = Mathf.Abs (playerC.getSpeed ().y);
 		posX = moveTowards(transform.position.x, playerC.transform.position.x, speedX);
-		posY = moveTowards(transform.position.y, playerC.transform.position.y, speedX);
+		posY = moveTowards(transform.position.y, playerC.transform.position.y+offset.y, speedX);
 
 		// If camera will have moved past the start of the map, reset to last x position to prevent this
 	//	if (main.WorldToScreenPoint (new Vector3 (posX, 0, 0)).x - main.pixelRect.width / 2f < main.WorldToScreenPoint (mapStart.position).x) {
