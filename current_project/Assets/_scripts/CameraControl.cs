@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// Controls camera tracking of player and other camera features, such as map bounds
+// Controls camera tracking of player and other camera features, such as map bounds and CameraTrigger constraints
 
 public class CameraControl : MonoBehaviour {
 
 	public Vector2 offset;
 	public PlayerController playerC; // Player
-	//public Transform mapStart; // Beginning of map, don't move camera view to left of this point
+	public Transform mapBegin; // Beginning of map, don't move camera view to left of this point
 	//public Transform mapTop; // Top of map, don't move camera view above this
 	private Transform cameraT; // The camera's transform
 
@@ -15,6 +15,9 @@ public class CameraControl : MonoBehaviour {
 	private float posX, posY;
 	private float minx;
 	private float speedX, speedY; // Speed to follow on x and y axes, respectively
+
+	private float cameraXStop;
+	private bool cameraConstrained;
 
 	// Set camera initial position, speed, and other initialization
 	void Awake () {
@@ -24,6 +27,7 @@ public class CameraControl : MonoBehaviour {
 		//minx = mapStart.position.x;
 		speedX = 10.0f;
 		speedY = 10.0f;
+		cameraXStop = 0.0f;
 	}
 	
 	// Move camera toward player
@@ -36,9 +40,14 @@ public class CameraControl : MonoBehaviour {
 		posY = moveTowards(transform.position.y, playerC.transform.position.y+offset.y, speedX);
 
 		// If camera will have moved past the start of the map, reset to last x position to prevent this
-	//	if (main.WorldToScreenPoint (new Vector3 (posX, 0, 0)).x - main.pixelRect.width / 2f < main.WorldToScreenPoint (mapStart.position).x) {
-	//		posX = cameraT.position.x;
-	//	}
+		//if (main.WorldToScreenPoint (new Vector3 (posX, 0, 0)).x - main.pixelRect.width / 2f < main.WorldToScreenPoint (mapBegin.position).x) {
+		if (posX <= mapBegin.position.x) {	
+			posX = cameraT.position.x;
+		}
+
+		else if (cameraConstrained && Mathf.Abs(posX) >= Mathf.Abs(cameraXStop)) {	
+			posX = cameraT.position.x;
+		}
 
 		// If camera will have moved above top of map, reset to last y position to prevent this
 	//	if (main.WorldToScreenPoint (new Vector3 (0, posY, 0)).y + main.pixelRect.height / 2f > main.WorldToScreenPoint (mapTop.position).y) {
@@ -47,6 +56,27 @@ public class CameraControl : MonoBehaviour {
 
 		// Set camera to new position
 		cameraT.position = new Vector3 (posX, posY, cameraT.position.z);
+	}
+
+	// Set x position that camera cannot move past
+	public void SetCameraConstraint (float xStopPos) {
+		cameraXStop = xStopPos;
+		cameraConstrained = true;
+	}
+
+	// Set cameraConstrained to false to prevent extra constraints
+	public void UnlockCamera () {
+		cameraConstrained = false;
+	}
+
+	// Get the current camera constraint - default is 0.0f for simplicity
+	public float GetCameraConstraint () {
+		return cameraXStop;
+	}
+
+	// Return if camera is constrained
+	public bool CameraConstrained () {
+		return cameraConstrained;
 	}
 
 	// Found this code in a YouTube tutorial

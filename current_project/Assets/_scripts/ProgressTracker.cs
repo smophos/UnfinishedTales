@@ -4,6 +4,7 @@ using System.Collections;
 
 public class ProgressTracker : MonoBehaviour {
 
+	// Single ProgressTracker instance and checkpoint bools
 	private static ProgressTracker tracker;
 	private bool bridgeItem;
     private bool woodsmanItem;
@@ -11,6 +12,7 @@ public class ProgressTracker : MonoBehaviour {
 	private bool bridgeCheck;
 	private bool bridgeDown;
 
+	// Quest objects for instantiation when checkpoint is reached, etc.
 	public GameObject woodsmanCube;
 	private GameObject woodsmanObject;
 
@@ -46,6 +48,7 @@ public class ProgressTracker : MonoBehaviour {
 		return tracker;
 	}
 
+	// Return bool for specified progress condition
 	public bool GetBool (string condition) {
 		if (condition.Equals ("bridgeItem"))
 			return bridgeItem;
@@ -60,6 +63,7 @@ public class ProgressTracker : MonoBehaviour {
         return false;
 	}
 
+	// Set the specified condition bool to mark player progress through various checkpoints
 	public void setBool (string condition, bool satisfied) {
 		if (condition.Equals ("bridgeItem")) {
 			storyManager.ChangeText ("He met a woodsman searching for a CHEST. Maybe he could use the woodsman's AXE ...");

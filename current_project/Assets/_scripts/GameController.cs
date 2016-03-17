@@ -14,9 +14,13 @@ using UnityEditor;
 public class GameController : MonoBehaviour {
 
 	private static GameController controller;
+	private float cameraXStop;
+	private bool cameraConstrained;
 
 	// Make sure there is only one instance of this class
 	void Awake () {
+		cameraXStop = 0.0f;
+		cameraConstrained = false;
 		if (controller == null) {
 			DontDestroyOnLoad (gameObject);
 			controller = this;

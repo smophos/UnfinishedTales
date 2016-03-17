@@ -3,6 +3,11 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Collections;
 
+
+/// <summary>
+/// StoryManager is the class to use for updating, adding to, and showing story text
+/// It is singleton, so use static GetStoryManager() to get instance for other classes 
+/// </summary>
 public class StoryManager : MonoBehaviour {
 
 	public Text storyText;
@@ -21,6 +26,7 @@ public class StoryManager : MonoBehaviour {
 		}
 	}
 
+	// Return single StoryManager instance
 	public static StoryManager GetStoryManager () {
 		return storyManager;
 	}
@@ -30,14 +36,17 @@ public class StoryManager : MonoBehaviour {
 	
 	}
 
+	// Change story text to specified string
 	public void ChangeText (string story) {
 		storyText.text = story;
 	}
 
+	// Append specified text to end of current story text
 	public void AddText (string story) {
 		storyText.text += story;
 	}
 
+	// Show story text by playing fade in and out animation
 	public void ShowText () {
 		story_anim.SetTrigger ("Play");
 	}
