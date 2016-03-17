@@ -12,11 +12,16 @@ public class ProgressTracker : MonoBehaviour {
 	private bool bridgeCheck;
 	private bool bridgeDown;
 
+	public Transform player;
+
 	// Quest objects for instantiation when checkpoint is reached, etc.
 	public GameObject woodsmanCube;
 	private GameObject woodsmanObject;
 
 	private StoryManager storyManager;
+
+	public delegate void ObjectiveAction(Transform goal);
+	public static event ObjectiveAction ObjectiveChanged;
 
 	// Make sure there is only one instance of this class
 	void Awake () {
@@ -77,6 +82,8 @@ public class ProgressTracker : MonoBehaviour {
 			storyManager.ChangeText ("He met a woodsman searching for a _____. Maybe he could use the woodsman's ___ ...");
 			Debug.Log ("Here");
 			woodsmanChat = satisfied;
+
+			ObjectiveChanged (player);
 
 			woodsmanObject = GameObject.Instantiate (woodsmanCube);
 			woodsmanObject.transform.position = new Vector3 (8f, 0.75f, -3f);
