@@ -7,7 +7,6 @@ public class Fairy_Controller : MonoBehaviour {
 	NavMeshAgent agent;
 	public Transform goal;
 	public Transform player;
-
 	bool followPlayer;
 
 	// Use this for initialization

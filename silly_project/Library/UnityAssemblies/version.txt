@@ -1,5 +1,5 @@
 5.3.3f1:2.2.0.0
-StandaloneWindows
+WebPlayer
 D:/Saumya/Unity 3D/Editor/Data/Managed/UnityEngine.dll
 D:/Saumya/Unity 3D/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
 D:/Saumya/Unity 3D/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
