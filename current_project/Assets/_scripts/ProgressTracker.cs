@@ -85,8 +85,8 @@ public class ProgressTracker : MonoBehaviour {
 
 			ObjectiveChanged (player);
 
-			woodsmanObject = GameObject.Instantiate (woodsmanCube);
-			woodsmanObject.transform.position = new Vector3 (8f, 0.75f, -3f);
+			//woodsmanObject = GameObject.Instantiate (woodsmanCube);
+			//woodsmanObject.transform.position = new Vector3 (8f, 0.75f, -3f);
 		}
 		if (condition.Equals ("bridgeCheck")) {
 			bridgeCheck = satisfied;

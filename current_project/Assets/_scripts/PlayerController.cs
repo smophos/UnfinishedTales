@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     public Transform enemyPosition;
     private StoryManager manager;
 
-    bool inBattle = false;
+    bool inBattle = false, wolfisDead = false;
     float leftBound = 0f, rightBound = 0f;
 
     // Use this for initialization
@@ -56,13 +56,13 @@ public class PlayerController : MonoBehaviour {
 			StoryManager.GetStoryManager ().ShowText ();
 		}
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             playerAnim.SetTrigger("Attack");
 
             if (Vector3.Distance(transform.position, enemyPosition.position) < 1.0f)
             {
-                if (!inBattle)
+                if (!inBattle && !wolfisDead)
                 {
                     inBattle = true;
 
@@ -79,11 +79,15 @@ public class PlayerController : MonoBehaviour {
                         wolf.health -= 10;
                         manager.ChangeText("Dealt 10 damage!");
                         manager.ShowText();
-                    }else
+
+
+                    }else if(inBattle)
                     {
+                        wolfisDead = true;
                         wolf.gameObject.SetActive(false);
                         manager.ChangeText("You killed the wolf! Go collect your prize :)");
                         manager.ShowText();
+                        inBattle = false;
 
                     }
 

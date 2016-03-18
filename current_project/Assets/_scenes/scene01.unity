@@ -1549,7 +1549,7 @@ MonoBehaviour:
   playerAnim: {fileID: 12609001}
   sprite: {fileID: 0}
   wolf: {fileID: 1844473584}
-  speed: 10
+  speed: 6
   WalkingSound: {fileID: 8300000, guid: 85493da95f4456d4398b62ed0943ebae, type: 3}
   enemyPosition: {fileID: 1844473590}
 --- !u!54 &649741211
