@@ -2302,7 +2302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdb5ae91e39ae6489fb081455872e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xStopPosition: 26.46
+  xStopPosition: 34
   cameraController: {fileID: 522338418}
   setNumber: 0
 --- !u!1 &1076989319
@@ -3125,7 +3125,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420414, guid: 93d1f107f59e8f948bbd16040c50e4ef, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6593408, guid: 93d1f107f59e8f948bbd16040c50e4ef, type: 2}
       propertyPath: m_IsTrigger
@@ -3161,7 +3161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afdb5ae91e39ae6489fb081455872e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xStopPosition: 26.46
+  xStopPosition: 34
   cameraController: {fileID: 522338418}
   setNumber: 0
 --- !u!1 &1629699820
