@@ -17,7 +17,7 @@ public class CameraControl : MonoBehaviour {
 	private float speedX, speedY; // Speed to follow on x and y axes, respectively
 
 	private float cameraXStop;
-	private bool cameraConstrained;
+	private bool cameraConstrained = false;
 
 	// Set camera initial position, speed, and other initialization
 	void Awake () {

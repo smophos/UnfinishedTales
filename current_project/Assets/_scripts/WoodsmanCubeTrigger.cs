@@ -7,6 +7,7 @@ public class WoodsmanCubeTrigger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		ProgressTracker.RegisterObjective (gameObject, 1);
 		tracker = ProgressTracker.GetProgressTracker ();
 	}
 

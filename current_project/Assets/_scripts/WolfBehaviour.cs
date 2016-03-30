@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class WolfBehaviour : MonoBehaviour {
-
-
-    public int health = 50; 
-    
+public class WolfBehaviour : ActiveAgent {
+ 
     public Transform player, patrol_left, patrol_right;
     public Animator anim;
     public Animation growlAnim;
@@ -19,6 +17,7 @@ public class WolfBehaviour : MonoBehaviour {
     void Start () {
         agent = GetComponent<NavMeshAgent>();
         wolfPos = agent.transform.position;
+		Enemies.Add (this);
     }
 	
 	// Update is called once per frame
@@ -94,4 +93,22 @@ public class WolfBehaviour : MonoBehaviour {
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+	public override void Pause () {
+		paused = !paused;
+	}
+
+	override public void DealDamage (ActiveAgent enemy) {
+		enemy.TakeDamage (damage);
+	}
+
+	override public void TakeDamage(int dmg) {
+		health -= dmg;
+		if (health <= 0)
+			Die ();
+	}
+
+	override protected void Die () {
+		Enemies.Remove (this);
+	}
 }

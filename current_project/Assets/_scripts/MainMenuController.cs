@@ -22,7 +22,7 @@ public class MainMenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	public static MainMenuController GetMenuController () {
@@ -31,7 +31,7 @@ public class MainMenuController : MonoBehaviour {
 
 	// Starts new game - currently just loads scene 1
 	public void NewGame () {
-		SceneManager.LoadSceneAsync ("scene02");
+		SceneManager.LoadSceneAsync ("intro");
 	}
 
 	// Load game code here

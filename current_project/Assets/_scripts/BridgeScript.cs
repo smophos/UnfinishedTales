@@ -7,6 +7,7 @@ public class BridgeScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		ProgressTracker.RegisterObjective (gameObject, 2);
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeAll;
 		tracker = ProgressTracker.GetProgressTracker ();
 	}

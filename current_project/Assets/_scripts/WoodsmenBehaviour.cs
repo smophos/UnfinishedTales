@@ -10,6 +10,7 @@ public class WoodsmenBehaviour : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+		ProgressTracker.RegisterObjective (gameObject, 0);
         tracker = ProgressTracker.GetProgressTracker();
         panel = DialoguePanel.Instance();
     }
