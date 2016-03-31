@@ -6,10 +6,11 @@ public class DialogueManager : MonoBehaviour {
 
 	private static DialogueManager dialogueManager;
 	public Text dialogueText;
-	public ActiveAgent player;
+	public ActiveAgent player, speaker;
 	float textDelay = 0.05f;
 	float nextDelay = 2f;
 	bool writing = false;
+	bool finished = false;
 
 	void Awake () {
 		if (dialogueManager == null) {
@@ -36,6 +37,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	public void StartDialogue (ActiveAgent talkitiveOne, Vector3 pos, string intitialText) {
+		speaker = talkitiveOne;
 		talkitiveOne.Pause ();
 		player.Pause ();
 		Vector3 screenPos = Camera.main.WorldToScreenPoint (pos);
@@ -44,7 +46,15 @@ public class DialogueManager : MonoBehaviour {
 		dialogueText.text = intitialText;
 	}
 
-	public IEnumerator UpdateText (string text) {
+	public void EndDialogue(ActiveAgent talkitiveOne) {
+		if (finished) {
+			talkitiveOne.Pause ();
+			player.Pause ();
+			dialogueText.text = "";
+		}
+	}
+
+	public IEnumerator UpdateText (string text, bool isDone) {
 		while (writing) {
 			yield return new WaitForSeconds (textDelay);
 		}
@@ -56,5 +66,9 @@ public class DialogueManager : MonoBehaviour {
 			yield return new WaitForSeconds (textDelay);
 		}
 		writing = false;
+		finished = isDone;
+
+		if (finished)
+			EndDialogue (speaker);
 	}
 }

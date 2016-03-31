@@ -29,6 +29,7 @@ public class PlayerController : ActiveAgent {
 	List<ActiveAgent> toRemove = new List<ActiveAgent> ();
 	bool inBattle = false;
     float leftBound = 0f, rightBound = 0f;
+	float attackDelay = 0.0f;
 
     // Use this for initialization
     void Start () {
@@ -51,6 +52,9 @@ public class PlayerController : ActiveAgent {
 	// Update is called once per frame
 	void Update () {
 
+		if (attackDelay > 0f)
+			attackDelay -= Time.deltaTime;
+
 		if (!paused) {
 
 			// Player movement back one layer
@@ -69,7 +73,8 @@ public class PlayerController : ActiveAgent {
 			}
 
 			// Fight related logic and controls
-			if (Input.GetMouseButtonDown (1)) {
+			if (Input.GetMouseButtonDown (1) && attackDelay <= 0) {
+				attackDelay = 0.5f;
 				playerAnim.SetTrigger ("Attack");
 
 				CheckForFoes ();

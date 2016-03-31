@@ -24,8 +24,8 @@ public class Fairy_Controller : ActiveAgent {
 
 		dialogue = DialogueManager.GetDialogueManager ();
 		dialogue.StartDialogue (this, transform.position + new Vector3 (0f, verticalDistanceToFairy + 1f, 0f), "Hello, my name is Unfinished Tales!");
-		StartCoroutine(dialogue.UpdateText ("We have some work to do!"));
-		StartCoroutine(dialogue.UpdateText ("Let's go!"));
+		StartCoroutine(dialogue.UpdateText ("We have some work to do!", false));
+		StartCoroutine(dialogue.UpdateText ("Let's go!", true));
 	}
 	
 	// Update is called once per frame
@@ -56,7 +56,10 @@ public class Fairy_Controller : ActiveAgent {
 
 	public override void Pause () {
 		paused = !paused;
-		agent.Stop ();
+		if (paused)
+			agent.Stop ();
+		else
+			agent.Resume ();
 	}
 
 	public override void TakeDamage (int dmg){}
