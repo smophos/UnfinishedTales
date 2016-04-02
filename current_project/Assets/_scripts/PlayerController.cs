@@ -24,6 +24,9 @@ public class PlayerController : ActiveAgent {
 
     private StoryManager manager;
 
+	private DialogueManager dialogue;
+	private Vector3 dialoguePos;
+
 	// fight related code
 	List<ActiveAgent> enemiesInRange = new List<ActiveAgent>();
 	List<ActiveAgent> toRemove = new List<ActiveAgent> ();
@@ -33,12 +36,13 @@ public class PlayerController : ActiveAgent {
 
     // Use this for initialization
     void Start () {
+		dialogue = DialogueManager.GetDialogueManager ();
+		dialoguePos = transform.position + new Vector3 (0f, 0.5f, 0f);
 		attackRadius = 1.0f;
         manager = StoryManager.GetStoryManager();
 		rb = GetComponent<Rigidbody> ();
         source = GetComponent<AudioSource>();
         distance = 3.0f;
-
 	}
 
 	void CheckForFoes () {
