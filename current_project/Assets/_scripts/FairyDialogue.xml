@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialogue>
+  <Greetings>
+    <Greeting>Hello!</Greeting>
+  </Greetings>
+  <Response id = "1" condition="fairy_met" value="false">
+    <Text>My name is Unfinished Tales!</Text>
+    <PlayerResponse>
+      <Text>Hello there, book!</Text>
+      <Next>2</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "2" condition="" value="">
+    <Text>We have a quest to go on!</Text>
+    <PlayerResponse>
+      <Text>We do?</Text>
+      <Next>3</Next>
+    </PlayerResponse>
+  </Response>
+</Dialogue>

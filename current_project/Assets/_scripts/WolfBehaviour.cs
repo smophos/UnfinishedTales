@@ -111,4 +111,8 @@ public class WolfBehaviour : ActiveAgent {
 	override protected void Die () {
 		Enemies.Remove (this);
 	}
+
+	public override string GetName () {
+		return name;
+	}
 }

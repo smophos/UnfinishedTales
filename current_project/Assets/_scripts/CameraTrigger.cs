@@ -33,7 +33,6 @@ public class CameraTrigger : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag ("Player")) {
 			enter[setNumber] = !enter[setNumber];
-			Debug.Log (enter[setNumber]);
 			if (enter[setNumber])
 				cameraController.SetCameraConstraint (xStopPosition);
 			else

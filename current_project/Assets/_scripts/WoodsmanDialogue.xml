@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Dialogue>
+  <Greetings>
+    <Greeting>Hello!</Greeting>
+  </Greetings>
+  <Response id = "1" condition="woodsman_met" value="false">
+    <Text>I have lost something very precious to me! Please, help me find it.</Text>
+    <PlayerResponse>
+      <Text></Text>
+      <Next>2</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "1" condition="woodsman_met" value="true">
+    <Text>Did you find my axe?</Text>
+    <PlayerResponse>
+      <Text></Text>
+      <Next>1</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "1" condition="woodsman_item" value="true">
+    <Text>Thank you! You can have my axe!</Text>
+    <PlayerResponse>
+      <Text></Text>
+      <Next>2</Next>
+    </PlayerResponse>
+  </Response>
+</Dialogue>

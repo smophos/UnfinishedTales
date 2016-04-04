@@ -6,15 +6,9 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour {
 
 	private static DialogueManager dialogueManager;
-	public Text dialogueText;
-	public ActiveAgent player;
-	private ActiveAgent speaker;
-	float textDelay = 0.04f;
-	float nextDelay = 1.5f;
-	bool writing;
-	bool finished;
-	Vector3 currentPos;
-	List<Vector3> positions = new List<Vector3>();
+	ActiveAgent player, speaker;
+	Conversation conversation;
+	bool conversing = false;
 
 	void Awake () {
 		if (dialogueManager == null) {
@@ -32,64 +26,48 @@ public class DialogueManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		finished = false;
-		writing = false;
-		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<ActiveAgent> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	}
-
-	void UpdatePosition(Vector3 pos) {
-		Vector3 screenPos = Camera.main.WorldToScreenPoint (pos);
-		dialogueText.rectTransform.anchoredPosition = new Vector2 (screenPos.x, screenPos.y);
-		Debug.Log (dialogueText.rectTransform.anchoredPosition);
-	}
-
-	public void StartDialogue (ActiveAgent talkitiveOne, Vector3 pos, string intitialText) {
-		currentPos = pos;
-		speaker = talkitiveOne;
-		talkitiveOne.Pause ();
-		player.Pause ();
-		Vector3 screenPos = Camera.main.WorldToScreenPoint (pos);
-		Debug.Log (screenPos);
-		dialogueText.rectTransform.anchoredPosition = new Vector2 (screenPos.x, screenPos.y);
-		dialogueText.text = intitialText;
-	}
-
-	public void EndDialogue(ActiveAgent talkitiveOne) {
-		if (finished) {
-			talkitiveOne.Pause ();
-			player.Pause ();
-			dialogueText.text = "";
-			speaker = null;
+		if (Input.GetMouseButtonDown (0) && conversing) {
+			EndConversation ();
 		}
 	}
 
-	public void UpdateText (string text, bool isDone, Vector3 pos) {
-		positions.Add (pos);
-		StartCoroutine (UpdateText (text, isDone));
+	public void CreateAConversation (ActiveAgent speaker, ActiveAgent listener) {
+		conversation = new Conversation (speaker, listener);
+		Begin ();
 	}
 
+	public void CreateAConversation (ActiveAgent speaker) {
+		conversation = new Conversation (speaker, player);
+		this.speaker = speaker;
+		Begin ();
+	}
 
-	public IEnumerator UpdateText (string text, bool isDone) {
-			while (writing) {
-				yield return new WaitForSeconds (textDelay);
-			}
-			writing = true;
-			yield return new WaitForSeconds (nextDelay);
-			UpdatePosition (positions[0]);
-			positions.RemoveAt (0);
-			dialogueText.text = "";
-			foreach (char c in text) {
-				dialogueText.text += c;
-				yield return new WaitForSeconds (textDelay);
-			}
-			writing = false;
-			finished = isDone;
+	void Begin() {
+		conversing = true;
+		speaker.Pause();
+		player.Pause ();
+		conversation.Begin ();
+		StartCoroutine ("UpdateConversation");
+	}
 
-			if (finished)
-				EndDialogue (speaker);
+	IEnumerator UpdateConversation () {
+		//Debug.Log("Here");
+		while (conversation.Next ())
+			yield return new WaitForSeconds (3f);
+		EndConversation();
+	}
+
+	void EndConversation () {
+		conversing = false;
+		conversation = null;
+		StopAllCoroutines ();
+		speaker.Pause();
+		player.Pause ();
+		Debug.Log ("Conversation over");
 	}
 }

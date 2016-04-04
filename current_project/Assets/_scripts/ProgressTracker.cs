@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ProgressTracker : MonoBehaviour {
 
 	// Single ProgressTracker instance and checkpoint bools
 	private static ProgressTracker tracker;
+	private bool fairyMet;
 	private bool bridgeItem;
     private bool woodsmanItem;
 	private bool woodsmanChat;
 	private bool bridgeCheck;
 	private bool bridgeDown;
+	Dictionary<string, bool> conditionDictionary; 
 
 	public Transform player;
 
@@ -26,11 +29,18 @@ public class ProgressTracker : MonoBehaviour {
 
 	// Make sure there is only one instance of this class
 	void Awake () {
+		fairyMet = false;
 		woodsmanChat = false;
         woodsmanItem = false;
         bridgeItem = false;
 		bridgeCheck = false;
 		bridgeDown = false;
+
+		conditionDictionary = new Dictionary<string, bool> () {
+			{"woodsman_met", woodsmanChat},
+			{"woodsman_item", woodsmanItem},
+			{"fairy_met", fairyMet}
+		};
 
 		if (tracker == null) {
 			DontDestroyOnLoad (gameObject);
@@ -54,6 +64,13 @@ public class ProgressTracker : MonoBehaviour {
 		objectives [index] = obj;
 	}
 
+	public Dictionary<string, bool> GetConditionDict () {
+//		Debug.Log ("Conditions:");
+//		foreach (var r in conditionDictionary)
+//			Debug.Log ("In Class: " + r);
+		return conditionDictionary;
+	}
+
 	public static ProgressTracker GetProgressTracker () {
 		return tracker;
 	}
@@ -75,6 +92,10 @@ public class ProgressTracker : MonoBehaviour {
 
 	// Set the specified condition bool to mark player progress through various checkpoints
 	public void setBool (string condition, bool satisfied) {
+		if (condition.Equals ("fairy_met")) {
+			fairyMet = satisfied;
+			conditionDictionary["fairy_met"] = satisfied;
+		}
 		if (condition.Equals ("bridgeItem")) {
 			storyManager.ChangeText ("He met a woodsman searching for a CHEST. Maybe he could use the woodsman's AXE ...");
 			storyManager.ShowText ();
@@ -83,6 +104,7 @@ public class ProgressTracker : MonoBehaviour {
 		}
 		if (condition.Equals ("woodsmanItem")) {
 			woodsmanItem = satisfied;
+			conditionDictionary["woodsman_item"] = satisfied;
 			storyManager.ChangeText ("He met a woodsman searching for a CHEST. Maybe he could use the woodsman's ___ ...");
 			storyManager.ShowText ();
 			ObjectiveChanged (objectives [0].transform);
@@ -92,6 +114,7 @@ public class ProgressTracker : MonoBehaviour {
 			storyManager.ShowText ();
 			Debug.Log ("Here");
 			woodsmanChat = satisfied;
+			conditionDictionary ["woodsman_met"] = satisfied;
 			ObjectiveChanged (objectives [1].transform);
 		}
 		if (condition.Equals ("bridgeCheck")) {

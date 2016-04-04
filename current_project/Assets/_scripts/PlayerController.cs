@@ -23,9 +23,7 @@ public class PlayerController : ActiveAgent {
     float delay = 0f;
 
     private StoryManager manager;
-
-	private DialogueManager dialogue;
-	private Vector3 dialoguePos;
+	DialogueManager conversation;
 
 	// fight related code
 	List<ActiveAgent> enemiesInRange = new List<ActiveAgent>();
@@ -36,10 +34,10 @@ public class PlayerController : ActiveAgent {
 
     // Use this for initialization
     void Start () {
-		dialogue = DialogueManager.GetDialogueManager ();
-		dialoguePos = transform.position + new Vector3 (0f, 0.5f, 0f);
+		name = "Player";
 		attackRadius = 1.0f;
         manager = StoryManager.GetStoryManager();
+		conversation = DialogueManager.GetDialogueManager ();
 		rb = GetComponent<Rigidbody> ();
         source = GetComponent<AudioSource>();
         distance = 3.0f;
@@ -222,5 +220,13 @@ public class PlayerController : ActiveAgent {
 
 	override protected void Die () {
 
+	}
+
+//	public void SubscribeToConversation (Conversation conversation) {
+//		this.conversation = conversation;
+//	}
+		
+	public override string GetName () {
+		return name;
 	}
 }
