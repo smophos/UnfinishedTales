@@ -77,16 +77,20 @@ public class ProgressTracker : MonoBehaviour {
 
 	// Return bool for specified progress condition
 	public bool GetBool (string condition) {
-		if (condition.Equals ("bridgeItem"))
+		if (condition.Equals("bridgeItem"))
 			return bridgeItem;
-        if (condition.Equals("woodsmanItem"))
+		if (condition.Equals("woodsman_item"))
             return woodsmanItem;
-		if (condition.Equals("woodsmanChat"))
+		if (condition.Equals("woodsman_met"))
 			return woodsmanChat;
 		if (condition.Equals("bridgeCheck"))
 			return bridgeCheck;
 		if (condition.Equals("bridgeDown"))
 			return bridgeDown;
+		if (condition.Equals("woodsman_met_no_axe"))
+			return (woodsmanChat && !bridgeItem);
+		if (condition.Equals("fairy_met"))
+			return fairyMet;
         return false;
 	}
 
@@ -102,14 +106,14 @@ public class ProgressTracker : MonoBehaviour {
 			bridgeItem = satisfied;
 			ObjectiveChanged (objectives [2].transform);
 		}
-		if (condition.Equals ("woodsmanItem")) {
+		if (condition.Equals ("woodsman_item")) {
 			woodsmanItem = satisfied;
 			conditionDictionary["woodsman_item"] = satisfied;
 			storyManager.ChangeText ("He met a woodsman searching for a CHEST. Maybe he could use the woodsman's ___ ...");
 			storyManager.ShowText ();
 			ObjectiveChanged (objectives [0].transform);
 		}
-		if (condition.Equals ("woodsmanChat")) {
+		if (condition.Equals ("woodsman_met")) {
 			storyManager.ChangeText ("He met a woodsman searching for a _____. Maybe he could use the woodsman's ___ ...");
 			storyManager.ShowText ();
 			Debug.Log ("Here");

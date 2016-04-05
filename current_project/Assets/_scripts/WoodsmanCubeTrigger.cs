@@ -13,7 +13,7 @@ public class WoodsmanCubeTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.CompareTag("Player")) {
-			tracker.setBool ("woodsmanItem", true);
+			tracker.setBool ("woodsman_item", true);
 			Destroy (this.gameObject);
 		}
 	}

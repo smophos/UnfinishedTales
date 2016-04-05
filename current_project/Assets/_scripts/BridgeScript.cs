@@ -11,6 +11,11 @@ public class BridgeScript : MonoBehaviour {
 		GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeAll;
 		tracker = ProgressTracker.GetProgressTracker ();
 	}
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.B))
+			Activate ();
+	}
 		
 	public void Activate() {
 		if (!tracker.GetBool ("bridgeDown")) {

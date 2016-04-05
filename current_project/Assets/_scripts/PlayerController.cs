@@ -13,6 +13,7 @@ public class PlayerController : ActiveAgent {
 	float startTime = 0f, distance;
 	public float speed = 1.0f;
 	int lane = 1;
+	public Transform lane_restriction_check;
     
     
     // for sound 
@@ -142,16 +143,61 @@ public class PlayerController : ActiveAgent {
 		}
 	}
 
+	int GetLayerRestriction (string tag) {
+		if (tag == "r1")
+			return 1;
+		else if (tag == "r2f")
+			return 2;
+		else if (tag == "r2b")
+			return 3;
+		return 0;
+	}
+
 	// Move player to next layer
 	void SwitchLayer (float startTime, float distance, int dir) {
 
-		// Check which direction player wants and which layer he/she is in to prevent falling off map
-		if ((lane != 3 && dir == 1) || (lane != 1 && dir == -1)) {
-			switching = true;
-			this.startTime = startTime;
-			startPos = transform.position;
-			endPos = transform.position + new Vector3 (0f, 0f, dir * distance);
+		Collider ground = null;
+		var low_colliders = Physics.OverlapSphere (lane_restriction_check.position, 0.05f);
+		foreach (var collider in low_colliders) {
+			if (collider.gameObject.layer == 12) {
+				ground = collider;
+				break;
+			}
+		}
 
+		if (ground == null)
+			return;
+		
+		int restriction = GetLayerRestriction (ground.gameObject.tag);
+
+		if (restriction == 1) {
+		} else if (restriction == 2) {
+			if ((lane != 2 && dir == 1) || (lane != 1 && dir == -1)) {
+				switching = true;
+				this.startTime = startTime;
+				startPos = transform.position;
+				endPos = transform.position + new Vector3 (0f, 0f, dir * distance);
+			}
+		} else if (restriction == 3) {
+			if ((lane != 3 && dir == 1) || (lane != 2 && dir == -1)) {
+				switching = true;
+				this.startTime = startTime;
+				startPos = transform.position;
+				endPos = transform.position + new Vector3 (0f, 0f, dir * distance);
+			}
+		}
+
+		// Check which direction player wants and which layer he/she is in to prevent falling off map
+		else if (restriction == 0) {
+			if ((lane != 3 && dir == 1) || (lane != 1 && dir == -1)) {
+				switching = true;
+				this.startTime = startTime;
+				startPos = transform.position;
+				endPos = transform.position + new Vector3 (0f, 0f, dir * distance);
+			}
+		}
+
+		if (switching) {
 			if (transform.position.z + dir * distance > -4.5 && transform.position.z + dir * distance <= -1.5)
 				lane = 1;
 			else if (transform.position.z + dir * distance > -1.5 && transform.position.z + dir * distance < 1.5)

@@ -52,13 +52,21 @@ public class DialogueManager : MonoBehaviour {
 		speaker.Pause();
 		player.Pause ();
 		conversation.Begin ();
+		StoryManager.GetStoryManager().ChangeText(conversation.GetLastResponseText ());
+		StoryManager.GetStoryManager().ShowText();
 		StartCoroutine ("UpdateConversation");
 	}
 
 	IEnumerator UpdateConversation () {
 		//Debug.Log("Here");
-		while (conversation.Next ())
+		while (conversation.Next ()) {
+			// The two story manager parts are quick examples of how you might
+			// connect the dialogue logic to a UI.
+			// Obviously, this way was just for show and not too great :)
+			StoryManager.GetStoryManager().ShowText();
 			yield return new WaitForSeconds (3f);
+			StoryManager.GetStoryManager().ChangeText(conversation.GetLastResponseText ());
+		}
 		EndConversation();
 	}
 

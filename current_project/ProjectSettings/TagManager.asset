@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Objective
+  - r1
+  - r2f
+  - r2b
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - NPC
   - Interaction
   - Ground
-  - 
+  - Bridge
   - 
   - 
   - 

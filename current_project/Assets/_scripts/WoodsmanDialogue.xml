@@ -7,21 +7,21 @@
     <Text>I have lost something very precious to me! Please, help me find it.</Text>
     <PlayerResponse>
       <Text></Text>
+      <Next>-1</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "1" condition="woodsman_met_no_axe" value="true">
+    <Text>Did you find my item?</Text>
+    <PlayerResponse>
+      <Text></Text>
       <Next>2</Next>
     </PlayerResponse>
   </Response>
-  <Response id = "1" condition="woodsman_met" value="true">
-    <Text>Did you find my axe?</Text>
-    <PlayerResponse>
-      <Text></Text>
-      <Next>1</Next>
-    </PlayerResponse>
-  </Response>
-  <Response id = "1" condition="woodsman_item" value="true">
+  <Response id = "2" condition="woodsman_item" value="true">
     <Text>Thank you! You can have my axe!</Text>
     <PlayerResponse>
       <Text></Text>
-      <Next>2</Next>
+      <Next>3</Next>
     </PlayerResponse>
   </Response>
 </Dialogue>

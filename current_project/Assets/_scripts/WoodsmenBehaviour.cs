@@ -21,13 +21,13 @@ public class WoodsmenBehaviour : ActiveAgent {
     {
 		conversation.CreateAConversation (this);
 
-		if (!tracker.GetBool ("woodsmanItem")) {
-			if (!tracker.GetBool ("woodsmanChat")) {
-				tracker.setBool ("woodsmanChat", true);
+		if (!tracker.GetBool ("woodsman_item")) {
+			if (!tracker.GetBool ("woodsman_met")) {
+				tracker.setBool ("woodsman_met", true);
 			}
 			//panel.ShowDialogue ("I have lost something very precious to me! Please, help me find it.");
 		}
-        if (tracker.GetBool("woodsmanItem"))
+		if (tracker.GetBool("woodsman_item"))
         {
             //panel.ShowDialogue("Thank you! You can have my axe!");
 			if (!tracker.GetBool ("bridgeItem")) {

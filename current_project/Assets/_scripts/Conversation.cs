@@ -13,6 +13,7 @@ public class Conversation  {
 	public int State { get; set;}
 	public List<Response> responses { get; set; }
 	XElement element;
+	ProgressTracker tracker;
 
 	public Conversation (ActiveAgent speaker, ActiveAgent listener) {
 		if (speaker is Fairy_Controller) {
@@ -23,7 +24,14 @@ public class Conversation  {
 		responses = ResponseList (element);
 		subscribers.Add (speaker);
 		subscribers.Add (listener);
+		tracker = ProgressTracker.GetProgressTracker ();
 		State = 1;
+	}
+
+	public string GetLastResponseText () {
+		if (lastResponse != null)
+			return lastResponse.Text;
+		return "";
 	}
 
 	public void Begin() {
@@ -65,8 +73,8 @@ public class Conversation  {
 		foreach (var condition in conditionList)
 		{
 			//Debug.Log (condition);
-			choices.Find (r => (r.Condition.First().Key == condition.Key && r.Condition.First().Value == condition.Value));
-			response = choices.Find (r => (r.Condition.First().Key == condition.Key && r.Condition.First().Value == condition.Value));
+			response = choices.Find (r => (tracker.GetBool(r.Condition.First().Key) == r.Condition.First().Value));
+			//choices.Find (r => (r.Condition.First().Key == condition.Key && r.Condition.First().Value == condition.Value));
 			if (response != null) {
 				//Debug.Log (response.Condition.First());
 				lastResponse = response;
