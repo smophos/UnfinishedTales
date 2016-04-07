@@ -89,17 +89,17 @@ public class PlayerController : ActiveAgent {
 						rightBound = transform.position.x + 3.0f;
 
 						manager.ChangeText ("Battle!");
-						manager.ShowText ();
+						//manager.ShowText ();
 					} else {
 						foreach (ActiveAgent enemy in enemiesInRange) {
 							DealDamage (enemy);
 							manager.ChangeText ("Dealt " + damage + " damage!");
-							manager.ShowText ();
+							//manager.ShowText ();
 							if (enemy.GetHealth () <= 0) {
 								toRemove.Add (enemy);
 								enemy.gameObject.SetActive (false);
 								manager.ChangeText ("You killed the wolf! Go collect your prize :)");
-								manager.ShowText ();
+								//manager.ShowText ();
 								inBattle = false;
 							}
 						}

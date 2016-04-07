@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
 
 public class ProgressTracker : MonoBehaviour {
 
@@ -13,7 +15,8 @@ public class ProgressTracker : MonoBehaviour {
 	private bool woodsmanChat;
 	private bool bridgeCheck;
 	private bool bridgeDown;
-	Dictionary<string, bool> conditionDictionary; 
+	Dictionary<string, bool> conditionDictionary;
+	Dictionary<string, string> storyDictionary; 
 
 	public Transform player;
 
@@ -23,24 +26,28 @@ public class ProgressTracker : MonoBehaviour {
 	private static GameObject[] objectives = new GameObject[20];
 
 	private StoryManager storyManager;
+	XElement element;
 
 	public delegate void ObjectiveAction(Transform goal);
 	public static event ObjectiveAction ObjectiveChanged;
 
 	// Make sure there is only one instance of this class
 	void Awake () {
+		conditionDictionary = new Dictionary<string, bool> () {
+			{"woodsman_met", woodsmanChat},
+			{"woodsman_item", woodsmanItem},
+			{"fairy_met", fairyMet}
+		};
+//		storyDictionary = new Dictionary<string, string> ();
+//		element = XElement.Load (".\\Assets\\_scripts\\ProgressData.xml");
+//		ParseXML (element);
+
 		fairyMet = false;
 		woodsmanChat = false;
         woodsmanItem = false;
         bridgeItem = false;
 		bridgeCheck = false;
 		bridgeDown = false;
-
-		conditionDictionary = new Dictionary<string, bool> () {
-			{"woodsman_met", woodsmanChat},
-			{"woodsman_item", woodsmanItem},
-			{"fairy_met", fairyMet}
-		};
 
 		if (tracker == null) {
 			DontDestroyOnLoad (gameObject);
@@ -92,6 +99,7 @@ public class ProgressTracker : MonoBehaviour {
 		if (condition.Equals("fairy_met"))
 			return fairyMet;
         return false;
+		//return conditionDictionary[condition];
 	}
 
 	// Set the specified condition bool to mark player progress through various checkpoints
@@ -102,7 +110,7 @@ public class ProgressTracker : MonoBehaviour {
 		}
 		if (condition.Equals ("bridgeItem")) {
 			storyManager.ChangeText ("He met a woodsman searching for a CHEST. Maybe he could use the woodsman's AXE ...");
-			storyManager.ShowText ();
+			//storyManager.ShowText ();
 			bridgeItem = satisfied;
 			ObjectiveChanged (objectives [2].transform);
 		}
@@ -110,12 +118,12 @@ public class ProgressTracker : MonoBehaviour {
 			woodsmanItem = satisfied;
 			conditionDictionary["woodsman_item"] = satisfied;
 			storyManager.ChangeText ("He met a woodsman searching for a CHEST. Maybe he could use the woodsman's ___ ...");
-			storyManager.ShowText ();
+			//storyManager.ShowText ();
 			ObjectiveChanged (objectives [0].transform);
 		}
 		if (condition.Equals ("woodsman_met")) {
 			storyManager.ChangeText ("He met a woodsman searching for a _____. Maybe he could use the woodsman's ___ ...");
-			storyManager.ShowText ();
+			//storyManager.ShowText ();
 			Debug.Log ("Here");
 			woodsmanChat = satisfied;
 			conditionDictionary ["woodsman_met"] = satisfied;
@@ -126,16 +134,46 @@ public class ProgressTracker : MonoBehaviour {
 
 			if (!woodsmanChat) {
 				storyManager.AddText ("... but the bridge was out. He would need to find another path.");
-				storyManager.ShowText ();
+				//storyManager.ShowText ();
 			} else {
 				storyManager.AddText (" The bridge was out, but the knight had a plan.");
-				storyManager.ShowText ();
+				//storyManager.ShowText ();
 			}
 		}
 		if (condition.Equals ("bridgeDown")) {
 			storyManager.ChangeText ("Having felled the tree, our hero coninued on his quest.");
-			storyManager.ShowText ();
+			//storyManager.ShowText ();
 			bridgeDown = satisfied;
 		}
     }
+		
+//	void ConvertToConditionDictionary (string condition, string value)
+//	{
+//		if (condition == "" && value == "") {
+//			conditionDictionary.Add("None", true);
+//			return;
+//		}
+//
+//		if (value.ToLower().Equals("true"))
+//			conditionDictionary.Add(condition, true);
+//		else if (value.ToLower().Equals("false"))
+//			conditionDictionary.Add(condition, false);
+//	}
+//
+//	void ConvertToStoryDictionary (string condition, string storyUpdate)
+//	{
+//		if (condition == "" && storyUpdate == "") {
+//			storyDictionary.Add("None", "");
+//			return;
+//		}
+//			storyDictionary.Add(condition, storyUpdate);
+//	}
+//
+//	void ParseXML (XElement element)
+//	{
+//		foreach (var r in element.Elements("ProgressBool")) {
+//			ConvertToConditionDictionary (r.Element("Condition").Value, r.Element("Value").Value);
+//			ConvertToStoryDictionary (r.Element("Condition").Value, r.Element("script").Value);
+//		}
+//	}
 }

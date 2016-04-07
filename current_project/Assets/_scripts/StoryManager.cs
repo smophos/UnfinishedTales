@@ -10,8 +10,8 @@ using System.Collections;
 /// </summary>
 public class StoryManager : MonoBehaviour {
 
-	public Text storyText;
-	public Animator story_anim;
+	public Text storyText, dialogue;
+	public Animator story_anim, dialogue_anim;
 
 	private static StoryManager storyManager;
 
@@ -47,15 +47,32 @@ public class StoryManager : MonoBehaviour {
 	}
 
 	// Show story text by playing fade in and out animation
+	// This is for the fading animation --- not permanent
 	public void ShowText () {
 		story_anim.SetTrigger ("Play");
 	}
 
-	/*public void TextVisible (bool cond) {
-		story_anim.StopPlayback ();
-		if (cond)
-			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 1f);
-		else
-			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 0f);
-	}*/
+	// Toggles visibility of text
+	public void ToggleText () {
+		storyText.gameObject.SetActive (!storyText.gameObject.activeSelf);
+	}
+
+	// Change dialogue text to specified string
+	public void ChangeDialogueText (string story) {
+		dialogue.text = story;
+	}
+
+	// Show dialogue text by playing fade in and out animation
+	// This is for the fading animation --- not permanent
+	public void ShowDialogueText () {
+		dialogue_anim.SetTrigger ("Play");
+	}
+
+//	public void TextVisible (bool cond) {
+//		story_anim.StopPlayback ();
+//		if (cond)
+//			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 1f);
+//		else
+//			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 0f);
+//	}
 }

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProgressData>
+  <ProgressBool>
+    <Condition>fairy_met</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>woodsman_met</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+    <ProgressBool>
+    <Condition>woodsman_item</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>woodsman_met_no_axe</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>bridgeCheck</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>bridgeItem</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>bridgeDown</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+</ProgressData>
