@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialogue>
+  <Greetings>
+    <Greeting>Hello!</Greeting>
+  </Greetings>
+  <Response id = "1" condition="fairy_met" value="false">
+    <Text>Hello, my name is Unfinished Tales!</Text>
+    <PlayerResponse>
+      <Text>Hello, how may I be of service?</Text>
+      <Next>2</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "2" condition="" value="">
+    <Text>I saw your valiant efforts to enter the forest.</Text>
+    <PlayerResponse>
+      <Text></Text>
+      <Next>3</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "3" condition="" value="">
+    <Text>I commend you on your bravery and fortitude!</Text>
+    <PlayerResponse>
+      <Text></Text>
+      <Next>4</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "4" condition="" value="">
+    <Text>I would like you to join me on a quest.</Text>
+    <PlayerResponse>
+      <Text>What would this quest entail?</Text>
+      <Next>5</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "5" condition="" value="">
+    <Text>I will explain more as events unfold.</Text>
+    <PlayerResponse>
+      <Text></Text>
+      <Next>6</Next>
+    </PlayerResponse>
+  </Response>
+  <Response id = "6" condition="" value="">
+    <Text>For now, please, follow me!</Text>
+    <PlayerResponse>
+      <Text></Text>
+      <Next>7</Next>
+    </PlayerResponse>
+  </Response>
+</Dialogue>

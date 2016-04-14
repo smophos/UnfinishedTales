@@ -23,8 +23,8 @@ public class Fairy_Controller : ActiveAgent {
 		agent.SetDestination (goal.position);
 		ProgressTracker.ObjectiveChanged += UpdateGoal;
 		conversation = DialogueManager.GetDialogueManager ();
-		conversation.CreateAConversation (this);
-		ProgressTracker.GetProgressTracker ().setBool ("fairy_met", true);
+		//conversation.CreateAConversation (this);
+		//ProgressTracker.GetProgressTracker ().setBool ("fairy_met", true);
 	}
 	
 	// Update is called once per frame

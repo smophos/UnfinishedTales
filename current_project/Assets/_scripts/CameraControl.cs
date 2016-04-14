@@ -10,7 +10,6 @@ public class CameraControl : MonoBehaviour {
 	public Transform mapBegin; // Beginning of map, don't move camera view to left of this point
 	//public Transform mapTop; // Top of map, don't move camera view above this
 	private Transform cameraT; // The camera's transform
-
 	private Camera main; // variable for main camera instead of using Camera.main multiple times
 	private float posX, posY;
 	private float minx;
@@ -18,9 +17,34 @@ public class CameraControl : MonoBehaviour {
 
 	private float cameraXStop;
 	private bool cameraConstrained = false;
+    
+    private AudioSource source; //adding sound
+    public AudioClip backMusic, fightMusic; //adding
+    
 
-	// Set camera initial position, speed, and other initialization
-	void Awake () {
+    void Update()
+    {
+        if (playerC.CheckNearbyFoes())
+        {
+            Debug.Log("There are foes nearby");
+            if (source.clip == backMusic)
+            {
+                source.Stop();
+                Debug.Log("There are foes nearby");
+                source.clip = fightMusic;
+                source.Play();
+            }
+
+        }else
+        {
+            source.clip = backMusic;
+            if (!source.isPlaying)
+                source.Play();
+        }
+    }
+
+    // Set camera initial position, speed, and other initialization
+    void Awake () {
 		cameraT = GetComponent<Transform> ();
 		cameraT.position = new Vector3(playerC.transform.position.x+offset.x, playerC.transform.position.y+offset.y, cameraT.position.z);
 		main = Camera.main;
@@ -28,6 +52,10 @@ public class CameraControl : MonoBehaviour {
 		speedX = 10.0f;
 		speedY = 10.0f;
 		cameraXStop = 0.0f;
+
+        source = GetComponent<AudioSource>();
+        source.playOnAwake = true;
+        source.loop = true;
 	}
 	
 	// Move camera toward player

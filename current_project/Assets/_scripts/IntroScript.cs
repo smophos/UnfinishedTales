@@ -12,16 +12,24 @@ public class IntroScript : MonoBehaviour {
 	string intro2 = "The New Order of Camelot responded to the pleas King Alfred of Lyonshire, sending Gelifrey to find and slay the dragon that held his daughter captive.\n\nAnd so our knight finds himself in a forest, Tillerton castle looming on the distant hillside, a constant reminder of his quest...";
 	float charDelay = 0.05f;
 
-	// Use this for initialization
-	void Start () {
-		StartCoroutine ("LoadLevel");
+    AudioSource fxSound;
+
+    // Use this for initialization
+    void Start () {
+
+        fxSound = GetComponent<AudioSource>();
+        fxSound.playOnAwake = true;
+        StartCoroutine ("LoadLevel");
 		StartCoroutine ("PlayIntro");
+
 	}
 
 	IEnumerator LoadLevel () {
+
 		level = SceneManager.LoadSceneAsync ("scene01");
 		level.allowSceneActivation = false;
 		yield return level;
+
 	}
 
 	// Update is called once per frame

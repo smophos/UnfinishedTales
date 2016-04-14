@@ -13,14 +13,20 @@ public class StoryManager : MonoBehaviour {
 	public Text storyText, dialogue;
 	public Animator story_anim, dialogue_anim;
 
-	private static StoryManager storyManager;
 
-	// Make sure there is only one instance of this class
-	void Awake () {
+	private static StoryManager storyManager;
+    public AudioSource fxSound;
+    public AudioClip successsound;
+
+    // Make sure there is only one instance of this class
+    void Awake () {
+
 		if (storyManager == null) {
 			DontDestroyOnLoad (gameObject);
 			storyManager = this;
-		}
+            fxSound = GetComponent<AudioSource>();
+           
+        }
 		else if (storyManager != this) {
 			Destroy (gameObject);
 		}
@@ -33,7 +39,7 @@ public class StoryManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	// Change story text to specified string
@@ -68,11 +74,11 @@ public class StoryManager : MonoBehaviour {
 		dialogue_anim.SetTrigger ("Play");
 	}
 
-//	public void TextVisible (bool cond) {
-//		story_anim.StopPlayback ();
-//		if (cond)
-//			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 1f);
-//		else
-//			storyText.color = new Color (storyText.color.r, storyText.color.g, storyText.color.b, 0f);
-//	}
+	public Animator GetDialogueAnimator() {
+		return dialogue_anim;
+	}
+
+	public void StopAnimator() {
+		dialogue_anim.StopPlayback ();
+	}
 }

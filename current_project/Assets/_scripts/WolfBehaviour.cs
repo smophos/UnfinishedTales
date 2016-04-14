@@ -13,9 +13,12 @@ public class WolfBehaviour : ActiveAgent {
     private Vector3 wolfPos;
     float xPos;
 
+    public AudioSource source;
+
     // Use this for initialization
     void Start () {
         agent = GetComponent<NavMeshAgent>();
+        source = GetComponent<AudioSource>();
         wolfPos = agent.transform.position;
 		Enemies.Add (this);
     }
@@ -60,6 +63,7 @@ public class WolfBehaviour : ActiveAgent {
             {
                 anim.SetTrigger("Growl");
                 growled = true;
+                source.PlayOneShot(source.clip, 0.75f);
             }
             else
             {

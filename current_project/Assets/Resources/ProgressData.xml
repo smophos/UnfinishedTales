@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProgressData>
+  <ProgressBool>
+    <Condition>intro</Condition>
+    <Value>false</Value>
+    <script>For this quest of ours, you must be able to explore. Use [A] and [D] to traverse the landscape in a linear direction.</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>horizontalMovement</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>beginLane</Condition>
+    <Value>false</Value>
+    <script>Use [W] and [S] to go upwards and downwards</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>laneMovement</Condition>
+    <Value>false</Value>
+    <script>Now, you must be able to interact with the objects, go forth and read the message on the sign.</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>atSign</Condition>
+    <Value>false</Value>
+    <script>Press "SPACE" to interact with objects or search terrain.</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>signRead</Condition>
+    <Value>false</Value>
+    <script>A sword lies hidden in the brush nearby! Hint: Remember your upward and downward movements.</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>swordFound</Condition>
+    <Value>false</Value>
+    <script>You found your sword! Press [L] to face the dangers of the forest.</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>fairy_met</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>woodsman_met</Condition>
+    <Value>false</Value>
+    <script>He met a woodsman searching for a _____. Maybe he could use the woodsman's ___ ...</script>
+  </ProgressBool>
+    <ProgressBool>
+    <Condition>woodsman_item</Condition>
+    <Value>false</Value>
+    <script>He met a woodsman searching for a CHEST. Maybe he could use the woodsman's ___ ...</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>woodsman_met_no_axe</Condition>
+    <Value>false</Value>
+    <script></script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>bridgeCheck</Condition>
+    <Value>false</Value>
+    <script>The bridge was out, but the knight had a plan.</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>bridgeItem</Condition>
+    <Value>false</Value>
+    <script>He met a woodsman searching for a CHEST. Maybe he could use the woodsman's AXE ...</script>
+  </ProgressBool>
+  <ProgressBool>
+    <Condition>bridgeDown</Condition>
+    <Value>false</Value>
+    <script>Having felled the tree, our hero coninued on his quest.</script>
+  </ProgressBool>
+</ProgressData>

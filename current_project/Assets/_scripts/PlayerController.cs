@@ -18,7 +18,7 @@ public class PlayerController : ActiveAgent {
     
     // for sound 
     private AudioSource source;
-    public AudioClip WalkingSound;
+    public AudioClip WalkingSound, swordswipe1;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
     float delay = 0f;
@@ -33,18 +33,28 @@ public class PlayerController : ActiveAgent {
     float leftBound = 0f, rightBound = 0f;
 	float attackDelay = 0.0f;
 
+
+
+
     // Use this for initialization
     void Start () {
-		name = "Player";
+
+        
+
+        name = "Player";
 		attackRadius = 1.0f;
         manager = StoryManager.GetStoryManager();
 		conversation = DialogueManager.GetDialogueManager ();
 		rb = GetComponent<Rigidbody> ();
+
+
         source = GetComponent<AudioSource>();
+   
+
         distance = 3.0f;
 	}
 
-	void CheckForFoes () {
+	public void CheckForFoes () {
 		enemiesInRange.Clear ();
 		foreach (ActiveAgent enemy in ActiveAgent.Enemies) {
 			if (Vector3.Distance (transform.position, enemy.gameObject.transform.position) < 1.0f)
@@ -52,13 +62,33 @@ public class PlayerController : ActiveAgent {
 		}
 	}
 
+    public bool CheckNearbyFoes()
+    {
+        CheckForFoes();
+
+        if (enemiesInRange.Count > 0)
+            return true;
+        else
+            return false;
+
+
+    }
 	// Update is called once per frame
 	void Update () {
 
 		if (attackDelay > 0f)
 			attackDelay -= Time.deltaTime;
 
-		if (!paused) {
+
+        if (!paused) {
+
+			if (Input.GetKeyDown(KeyCode.L) && ProgressTracker.GetProgressTracker().GetBool("swordFound"))
+			{
+
+				source.Stop();
+				source.clip = swordswipe1;
+				source.PlayOneShot(swordswipe1, 0.75f);
+			}
 
 			// Player movement back one layer
 			if (Input.GetKeyDown (KeyCode.W) && !switching) {
@@ -75,13 +105,21 @@ public class PlayerController : ActiveAgent {
 				StoryManager.GetStoryManager ().ShowText ();
 			}
 
-			// Fight related logic and controls
-			if (Input.GetMouseButtonDown (1) && attackDelay <= 0) {
-				attackDelay = 0.5f;
-				playerAnim.SetTrigger ("Attack");
+    
 
-				CheckForFoes ();
+            
+                    
+            // Fight related logic and controls
+			if (Input.GetKeyDown(KeyCode.L) && attackDelay <= 0  && ProgressTracker.GetProgressTracker().GetBool("swordFound")) {
+
+                attackDelay = 0.5f;
+                playerAnim.SetTrigger("Attack");
+
+                
+
+                CheckForFoes ();
 				if (enemiesInRange.Count > 0) {
+
 					if (!inBattle) {
 						inBattle = true;
 
@@ -96,11 +134,15 @@ public class PlayerController : ActiveAgent {
 							manager.ChangeText ("Dealt " + damage + " damage!");
 							//manager.ShowText ();
 							if (enemy.GetHealth () <= 0) {
-								toRemove.Add (enemy);
+
+                                toRemove.Add (enemy);
 								enemy.gameObject.SetActive (false);
-								manager.ChangeText ("You killed the wolf! Go collect your prize :)");
-								//manager.ShowText ();
-								inBattle = false;
+                                
+                                manager.ChangeText ("You killed the wolf! Go collect your prize :)");
+                                Debug.Log("We killed things");
+                                manager.fxSound.PlayOneShot(manager.successsound, 0.75f);
+                                //manager.ShowText ();
+                                inBattle = false;
 							}
 						}
 						foreach (ActiveAgent agent in toRemove) {
@@ -227,13 +269,15 @@ public class PlayerController : ActiveAgent {
                 if (delay <= 0f)
                 {
                     source.Stop();
+                    source.clip = WalkingSound;
                     float vol = Random.Range(volLowRange, volHighRange);
                     source.PlayOneShot(WalkingSound, vol);
                     delay = 1f;
                 }
             }
             else {
-                source.Stop();
+                if (source.clip != swordswipe1)
+                    source.Stop();
                 delay = 0f;
             }
         }
@@ -254,6 +298,10 @@ public class PlayerController : ActiveAgent {
 
 	public override void Pause () {
 		paused = !paused;
+		if (paused) {
+			source.Stop ();
+			playerAnim.SetBool ("isWalking", false);
+		}
 	}
 
 	override public void DealDamage (ActiveAgent enemy) {

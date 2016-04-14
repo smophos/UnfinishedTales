@@ -15,6 +15,7 @@ public class WoodsmenBehaviour : ActiveAgent {
         tracker = ProgressTracker.GetProgressTracker();
 		conversation = DialogueManager.GetDialogueManager ();
         panel = DialoguePanel.Instance();
+		name = "Woodsman";
     }
 		
     void OnTriggerEnter(Collider other)

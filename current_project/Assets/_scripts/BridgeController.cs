@@ -25,7 +25,7 @@ public class BridgeController : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Player") && tracker.GetBool ("bridgeItem")) {
 			bridge.Activate ();
 		} else {
-			panel.ShowDialogue ("Need to find a way to get across! Try another route.");
+			//panel.ShowDialogue ("Need to find a way to get across! Try another route.");
 		}
 	}
 }
