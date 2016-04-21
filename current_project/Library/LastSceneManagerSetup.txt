@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_scenes/scene01.unity
+- path: Assets/_scenes/ClosingCredits.unity
   isLoaded: 1
   isActive: 1

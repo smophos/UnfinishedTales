@@ -28,7 +28,7 @@ public class SwordFinder : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-		if (Input.GetKeyDown(KeyCode.Space) && tracker.GetBool("signRead"))
+		if (InputMapper.GetInputDown("Use") && tracker.GetBool("signRead") && !PauseMenuController.GetMenuController().gamePaused)
         {
 			tracker.setBool ("swordFound", true);
 			boundary.SetActive (false);

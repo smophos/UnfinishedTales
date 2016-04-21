@@ -24,7 +24,7 @@ public class SignTrigger : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+		if (InputMapper.GetInputDown("Use") && !PauseMenuController.GetMenuController().gamePaused)
         {
             Debug.Log("Space");
             panel.ShowDialogue("Bridge Ahead!!!");

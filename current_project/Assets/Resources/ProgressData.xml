@@ -3,71 +3,85 @@
   <ProgressBool>
     <Condition>intro</Condition>
     <Value>false</Value>
-    <script>For this quest of ours, you must be able to explore. Use [A] and [D] to traverse the landscape in a linear direction.</script>
+    <script>For this quest of ours, you must be able to explore. Use #input.Left and #input.Right to traverse the landscape in a linear direction.</script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>horizontalMovement</Condition>
     <Value>false</Value>
     <script></script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>beginLane</Condition>
     <Value>false</Value>
-    <script>Use [W] and [S] to go upwards and downwards</script>
+    <script>Use #input.Forward and #input.Backward to go upwards and downwards</script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>laneMovement</Condition>
     <Value>false</Value>
     <script>Now, you must be able to interact with the objects, go forth and read the message on the sign.</script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>atSign</Condition>
     <Value>false</Value>
-    <script>Press "SPACE" to interact with objects or search terrain.</script>
+    <script>Press #input.Use to interact with objects or search terrain.</script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>signRead</Condition>
     <Value>false</Value>
-    <script>A sword lies hidden in the brush nearby! Hint: Remember your upward and downward movements.</script>
+    <script>A sword lies hidden in the brush nearby! Hint: Try using #input.Use to interact.</script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>swordFound</Condition>
     <Value>false</Value>
-    <script>You found your sword! Press [L] to face the dangers of the forest.</script>
+    <script>You found your sword! Press #input.Attack to face the dangers of the forest.</script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>fairy_met</Condition>
     <Value>false</Value>
     <script></script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>woodsman_met</Condition>
     <Value>false</Value>
     <script>He met a woodsman searching for a _____. Maybe he could use the woodsman's ___ ...</script>
+    <objective>1</objective>
   </ProgressBool>
     <ProgressBool>
     <Condition>woodsman_item</Condition>
     <Value>false</Value>
     <script>He met a woodsman searching for a CHEST. Maybe he could use the woodsman's ___ ...</script>
+    <objective>0</objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>woodsman_met_no_axe</Condition>
     <Value>false</Value>
     <script></script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>bridgeCheck</Condition>
     <Value>false</Value>
     <script>The bridge was out, but the knight had a plan.</script>
+    <objective></objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>bridgeItem</Condition>
     <Value>false</Value>
     <script>He met a woodsman searching for a CHEST. Maybe he could use the woodsman's AXE ...</script>
+    <objective>2</objective>
   </ProgressBool>
   <ProgressBool>
     <Condition>bridgeDown</Condition>
     <Value>false</Value>
     <script>Having felled the tree, our hero coninued on his quest.</script>
+    <objective></objective>
   </ProgressBool>
 </ProgressData>

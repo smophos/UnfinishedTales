@@ -984,6 +984,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1165,6 +1166,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11424180, guid: 8770899547708b142baf25cd870de406, type: 2}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 22311458, guid: 22a075fc0290fa844a8676b23aebb6cd,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8770899547708b142baf25cd870de406, type: 2}
   m_IsPrefabParent: 0

@@ -47,6 +47,7 @@ public class PlayerController : ActiveAgent {
 		conversation = DialogueManager.GetDialogueManager ();
 		rb = GetComponent<Rigidbody> ();
 
+		PauseMenuController.Pause += Pause;
 
         source = GetComponent<AudioSource>();
    
@@ -82,7 +83,7 @@ public class PlayerController : ActiveAgent {
 
         if (!paused) {
 
-			if (Input.GetKeyDown(KeyCode.L) && ProgressTracker.GetProgressTracker().GetBool("swordFound"))
+			if (InputMapper.GetInputDown("Attack") && ProgressTracker.GetProgressTracker().GetBool("swordFound"))
 			{
 
 				source.Stop();
@@ -91,12 +92,12 @@ public class PlayerController : ActiveAgent {
 			}
 
 			// Player movement back one layer
-			if (Input.GetKeyDown (KeyCode.W) && !switching) {
+			if (InputMapper.GetInputDown("Forward") && !switching) {
 				SwitchLayer (Time.time, distance, 1);
 			}
 
 			// Player movement forward one layer
-			if (Input.GetKeyDown (KeyCode.S) && !switching) {
+			if (InputMapper.GetInputDown("Backward") && !switching) {
 				SwitchLayer (Time.time, distance, -1);
 			}
 
@@ -110,7 +111,7 @@ public class PlayerController : ActiveAgent {
             
                     
             // Fight related logic and controls
-			if (Input.GetKeyDown(KeyCode.L) && attackDelay <= 0  && ProgressTracker.GetProgressTracker().GetBool("swordFound")) {
+			if (InputMapper.GetInputDown("Attack") && attackDelay <= 0  && ProgressTracker.GetProgressTracker().GetBool("swordFound")) {
 
                 attackDelay = 0.5f;
                 playerAnim.SetTrigger("Attack");
@@ -154,7 +155,12 @@ public class PlayerController : ActiveAgent {
 			}
 
 			// Get horizontal player motion if correct keys are pressed
-			float horizontal = Input.GetAxisRaw ("Horizontal");
+			float horizontal = 0f;
+
+			if (InputMapper.GetInput("Right"))
+				horizontal = 1f;
+			if (InputMapper.GetInput("Left"))
+				horizontal = -1f;
 
 			// Set animation to walking for player if movement is not 0
 			playerAnim.SetBool ("isWalking", horizontal != 0);

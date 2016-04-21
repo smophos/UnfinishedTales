@@ -25,12 +25,13 @@ public class TutorialScript : MonoBehaviour
      void OnTriggerEnter(Collider other)
      {
 		tracker.setBool ("atSign", true);
-		player.Pause ();
+		if (!tracker.GetBool("signRead")) 
+			player.Pause ();
      }
 
     void OnTriggerStay(Collider other)
     {
-		if (Input.GetKeyDown(KeyCode.Space) && tracker.GetBool("atSign"))
+		if (InputMapper.GetInputDown("Use") && tracker.GetBool("atSign") && !PauseMenuController.GetMenuController().gamePaused)
         {
 			if (!tracker.GetBool("signRead"))
 				player.Pause ();

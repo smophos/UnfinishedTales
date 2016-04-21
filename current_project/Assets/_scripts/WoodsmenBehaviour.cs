@@ -25,6 +25,7 @@ public class WoodsmenBehaviour : ActiveAgent {
 		if (!tracker.GetBool ("woodsman_item")) {
 			if (!tracker.GetBool ("woodsman_met")) {
 				tracker.setBool ("woodsman_met", true);
+				tracker.setBool ("woodsman_met_no_axe", true);
 			}
 			//panel.ShowDialogue ("I have lost something very precious to me! Please, help me find it.");
 		}

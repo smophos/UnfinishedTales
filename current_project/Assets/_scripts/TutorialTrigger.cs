@@ -14,8 +14,8 @@ public class TutorialTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (tracker.GetBool ("beginLane") && ! tracker.GetBool ("laneMovement")) {
-			if (Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.S))
+		if (tracker.GetBool ("beginLane") && ! tracker.GetBool ("laneMovement") && !PauseMenuController.GetMenuController().gamePaused) {
+			if (InputMapper.GetInputDown("Forward") || InputMapper.GetInputDown("Backward"))
 				tracker.setBool ("laneMovement", true);
 				//player.Pause ();
 		}
@@ -23,7 +23,8 @@ public class TutorialTrigger : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (other.gameObject.CompareTag ("Player")) {
-			tracker.setBool ("beginLane", true);
+			if (!tracker.GetBool ("beginLane"))
+				tracker.setBool ("beginLane", true);
 			//player.Pause ();
 		}
 	}

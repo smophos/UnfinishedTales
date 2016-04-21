@@ -35,11 +35,11 @@ public class IntroScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (level != null) {
-			if (Input.GetKeyDown (KeyCode.Space) && level.progress >= .9f)
+			if (InputMapper.GetInputDown("Use") && level.progress >= .9f)
 				level.allowSceneActivation = true;
 		}
 
-		if (Input.GetMouseButtonDown (0)) {
+		if (InputMapper.GetInputDown("Use")) {
 			charDelay = 0f;
 		}
 	}

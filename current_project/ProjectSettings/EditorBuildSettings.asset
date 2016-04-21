@@ -6,8 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_scenes/OpeningCredits.unity
+  - enabled: 1
     path: Assets/_scenes/main_menu.unity
   - enabled: 1
     path: Assets/_scenes/intro.unity
   - enabled: 1
     path: Assets/_scenes/scene01.unity
+  - enabled: 1
+    path: Assets/_scenes/ClosingCredits.unity

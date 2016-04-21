@@ -23,6 +23,7 @@ public class Fairy_Controller : ActiveAgent {
 		agent.SetDestination (goal.position);
 		ProgressTracker.ObjectiveChanged += UpdateGoal;
 		conversation = DialogueManager.GetDialogueManager ();
+		PauseMenuController.Pause += Pause;
 		//conversation.CreateAConversation (this);
 		//ProgressTracker.GetProgressTracker ().setBool ("fairy_met", true);
 	}
@@ -32,7 +33,11 @@ public class Fairy_Controller : ActiveAgent {
 		if (!paused) {
 			if (!followPlayer) {
 				agent.stoppingDistance = 0.5f;
-				if (Vector3.Distance (transform.position, player.position) > 5.0f)
+				if (agent.remainingDistance > Vector3.Distance (player.position, goal.position)) {
+					agent.speed = 7f;
+				}
+				agent.speed = 4.5f;
+				if (Vector3.Distance (transform.position, player.position) > 10.0f && agent.remainingDistance <= Vector3.Distance (player.position, goal.position))
 					agent.Stop ();
 				else if (Vector3.Distance (transform.position, player.position) <= 5.0f && agent.velocity == Vector3.zero)
 					agent.Resume ();

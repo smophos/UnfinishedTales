@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// If the player left clicks, end the conversation
-		if (Input.GetMouseButtonDown (0) && conversing) {
+		if (InputMapper.GetInputDown("Use") && conversing) {
 			EndConversation ();
 		}
 	}

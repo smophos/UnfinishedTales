@@ -21,6 +21,7 @@ public class WolfBehaviour : ActiveAgent {
         source = GetComponent<AudioSource>();
         wolfPos = agent.transform.position;
 		Enemies.Add (this);
+		PauseMenuController.Pause += Pause;
     }
 	
 	// Update is called once per frame

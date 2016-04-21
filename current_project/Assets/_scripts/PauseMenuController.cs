@@ -13,6 +13,14 @@ public class PauseMenuController : MonoBehaviour {
 
 	private static PauseMenuController menuController;
 	public Canvas canvas;
+	GameObject pausePanel, optionsPanel;
+	string name1;
+	public bool gamePaused = false;
+	bool inOptions = false;
+
+	public delegate void PauseAction();
+	public static event PauseAction Pause;
+	public static event PauseAction Cancel;
 	//public AudioMixerSnapshot paused, unpaused;
 
 	// Make sure there is only one instance of this class, initiate pause canvase, default canvase to disabled
@@ -20,6 +28,10 @@ public class PauseMenuController : MonoBehaviour {
 		if (menuController == null) {
 			DontDestroyOnLoad (gameObject);
 			canvas = Instantiate (canvas);
+			optionsPanel = GameObject.FindWithTag ("Options");
+			name1 = optionsPanel.name;
+			Debug.Log (optionsPanel.name);
+			optionsPanel.SetActive (false);
 			DontDestroyOnLoad (canvas);
 			canvas.enabled = false;
 			menuController = this;
@@ -29,7 +41,7 @@ public class PauseMenuController : MonoBehaviour {
 		}
 	}
 
-	void OnLevelWasLoaded (int level) {
+	void Start () {
 
 	}
 
@@ -38,7 +50,15 @@ public class PauseMenuController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape) && !(SceneManager.GetActiveScene ().name == "main_menu"))
 		{
 			canvas.enabled = !canvas.enabled;
+			Debug.Log (optionsPanel);
 			//Cursor.visible = !Cursor.visible;
+			if (inOptions) {
+				optionsPanel.SetActive (false);
+				pausePanel.SetActive (true);
+				inOptions = false;
+				Cancel ();
+			}
+
 			PauseGame ();
 		}
 	}
@@ -53,6 +73,9 @@ public class PauseMenuController : MonoBehaviour {
 	void PauseGame () {
 		// Debug.Log (Cursor.lockState);
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+		gamePaused = !gamePaused;
+		Pause();
+
 		/*if (Time.timeScale == 0) 
 		{
 			Cursor.lockState = CursorLockMode.Confined;
@@ -77,17 +100,30 @@ public class PauseMenuController : MonoBehaviour {
 
 	// Save code here
 	public void Save () {
-		
+
 	}
 
 	// Load code here
 	public void Load () {
-
+		Debug.Log (optionsPanel);
 	}
 
 	// Options menu code here
 	public void Options () {
+		Debug.Log (name1);
+		if (pausePanel == null) {
+			pausePanel = GameObject.FindWithTag ("Pause");
+		}
 
+		if (inOptions) {
+			optionsPanel.SetActive (false);
+			pausePanel.SetActive (true);
+			inOptions = false;
+		} else {
+			pausePanel.SetActive (false);
+			optionsPanel.SetActive (true);
+			inOptions = true;
+		}
 	}
 
 	// Calls GameController.Quit() --- later will ask if want to quit to main menu or desktop

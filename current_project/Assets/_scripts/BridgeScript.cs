@@ -13,8 +13,8 @@ public class BridgeScript : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.B))
-			Activate ();
+		//if (Input.GetKeyDown(KeyCode.B))
+		//	Activate ();
 	}
 		
 	public void Activate() {

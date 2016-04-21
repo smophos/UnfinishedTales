@@ -16,7 +16,8 @@ public class ProgressTracker : MonoBehaviour {
 
 	// Dictionaries to hold cpondition, value pairs and condition, string response pairs
 	Dictionary<string, bool> conditionDictionary;
-	Dictionary<string, string> storyDictionary; 
+	Dictionary<string, string> storyDictionary;
+	Dictionary<string, int> objectiveDictionary; 
 
 	public Transform player;
 
@@ -42,6 +43,7 @@ public class ProgressTracker : MonoBehaviour {
 		//			{"fairy_met", fairyMet}
 		//		};
 		storyDictionary = new Dictionary<string, string> ();
+		objectiveDictionary = new Dictionary<string, int> ();
 		TextAsset progressData = Resources.Load ("ProgressData") as TextAsset;
 		XDocument document = XDocument.Parse (progressData.text);
 		element = document.Root;
@@ -109,6 +111,8 @@ public class ProgressTracker : MonoBehaviour {
 			conditionDictionary [condition] = satisfied;
 			if (storyDictionary[condition] != "")
 				storyManager.ChangeText (storyDictionary[condition]);
+			if (objectiveDictionary [condition] != -1)
+				ObjectiveChanged (objectives[objectiveDictionary [condition]].transform);
 		}
 
 	}
@@ -131,12 +135,47 @@ public class ProgressTracker : MonoBehaviour {
 	// Helper method to convert parsed XML for condition and script
 	// into storyDictionary
 	void ConvertToStoryDictionary (string condition, string storyUpdate)
-	{
+	{			
 		if (condition == "" && storyUpdate == "") {
 			storyDictionary.Add("None", "");
 			return;
 		}
-		storyDictionary.Add(condition, storyUpdate);
+
+		string story = ParseStoryElement (storyUpdate);
+
+		storyDictionary.Add(condition, story);
+	}
+
+	void ConvertToObjectiveDictionary (string condition, string objective)
+	{
+		if (condition == "" && objective == "") {
+			objectiveDictionary.Add("None", -1);
+			return;
+		}
+
+		else if (objective == "") {
+			objectiveDictionary.Add(condition, -1);
+			return;
+		}
+		objectiveDictionary.Add(condition, int.Parse(objective));
+	}
+
+	string ParseStoryElement (string story) {
+		string[] parts = story.Split (' ');
+		string result = "";
+		Dictionary<string, string> specials = new Dictionary<string, string> ();
+		foreach (string part in parts) {
+			string p = part;
+			if (part.StartsWith ("#")) {
+				p = part.Substring (1);
+				string[] components = p.Split ('.');
+
+				if (components [0] == "input")
+					p = "[" + InputMapper.GetKey (components [1]) + "]";
+			}
+			result += p + " ";
+		}
+		return result;
 	}
 
 	// Parse xml file for ProgressBool data (currently in ProgressData.xml)
@@ -144,6 +183,14 @@ public class ProgressTracker : MonoBehaviour {
 	{
 		foreach (var r in element.Elements("ProgressBool")) {
 			ConvertToConditionDictionary (r.Element("Condition").Value, r.Element("Value").Value);
+			ConvertToStoryDictionary (r.Element("Condition").Value, r.Element("script").Value);
+			ConvertToObjectiveDictionary (r.Element("Condition").Value, r.Element("objective").Value);
+		}
+	}
+
+	public void ReParseStoryXML () {
+		storyDictionary.Clear ();
+		foreach (var r in element.Elements("ProgressBool")) {
 			ConvertToStoryDictionary (r.Element("Condition").Value, r.Element("script").Value);
 		}
 	}

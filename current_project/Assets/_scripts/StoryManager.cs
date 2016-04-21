@@ -10,6 +10,7 @@ using System.Collections;
 /// </summary>
 public class StoryManager : MonoBehaviour {
 
+	public Canvas storyCanvas;
 	public Text storyText, dialogue;
 	public Animator story_anim, dialogue_anim;
 
@@ -30,6 +31,10 @@ public class StoryManager : MonoBehaviour {
 		else if (storyManager != this) {
 			Destroy (gameObject);
 		}
+	}
+
+	void Start () {
+		PauseMenuController.Pause += Pause;
 	}
 
 	// Return single StoryManager instance
@@ -80,5 +85,9 @@ public class StoryManager : MonoBehaviour {
 
 	public void StopAnimator() {
 		dialogue_anim.StopPlayback ();
+	}
+
+	void Pause () {
+		storyCanvas.enabled = !storyCanvas.enabled;
 	}
 }
