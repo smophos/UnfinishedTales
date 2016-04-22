@@ -161,6 +161,9 @@ public class ProgressTracker : MonoBehaviour {
 	}
 
 	string ParseStoryElement (string story) {
+		if (story == "")
+			return "";
+
 		string[] parts = story.Split (' ');
 		string result = "";
 		Dictionary<string, string> specials = new Dictionary<string, string> ();
